@@ -1,24 +1,18 @@
 
 
-## Efeito de digitação animado no título do Hero
+## Substituir vídeo de fundo por YouTube embed
 
-Implementar um efeito **typewriter** infinito no `<h1>` do `HeroSection.tsx`:
+O vídeo atual usa uma tag `<video>` com link do Google Drive. Para YouTube sem player visível, é necessário usar um `<iframe>` com parâmetros específicos.
 
-1. O texto ".We are the team/" será digitado caractere por caractere
-2. Após completar, pausa breve, depois apaga caractere por caractere
-3. Cursor `_` (underscore) piscando no final, sempre visível
-4. Loop infinito
+**Video ID:** `neFhIUipjLU`
 
-### Implementação
+### Alterações em `src/components/HeroSection.tsx`
 
-**Arquivo:** `src/components/HeroSection.tsx`
-
-- Criar um estado `displayText` que vai de `""` até `".We are the team/"` e volta
-- Usar `useEffect` com `setInterval`/`setTimeout` para controlar a velocidade de digitação (~100ms) e apagamento (~60ms), com pausa (~2s) quando completo e (~1s) quando vazio
-- Cursor `_` com animação CSS `blink` (opacidade alternando a cada 500ms)
-- Manter o `motion.h1` existente com fade-in inicial, substituindo o texto estático pelo `displayText` + cursor
-
-### Keyframe do cursor
-
-Adicionar no `index.css` um keyframe `blink` para o cursor underscore piscar.
+Substituir a tag `<video>` por um `<iframe>` do YouTube com:
+- URL: `https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3`
+- `playlist=neFhIUipjLU` é necessário para o loop funcionar no embed
+- Opacidade de 60% (`opacity-60`)
+- `pointer-events-none` para impedir interação com o player
+- Escalar o iframe maior que o container (`scale-[1.5]`) para esconder bordas pretas do YouTube e preencher a área como `object-cover`
+- Remover a constante `VIDEO_URL` que não será mais usada
 
