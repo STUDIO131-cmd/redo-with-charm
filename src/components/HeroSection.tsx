@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "@/assets/logo-studio131.png";
 import { motion } from "framer-motion";
 
-const VIDEO_URL = "https://drive.google.com/uc?export=download&id=1jEB0KGbMppQeKKlHUFecgpK2iywPixoA";
+
 
 const FULL_TEXT = ".We are the team/";
 
@@ -33,14 +33,15 @@ const HeroSection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden" style={{ backgroundColor: "hsl(0 0% 0%)" }}>
       {/* Video background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
-        src={VIDEO_URL}
-      />
+      <div className="absolute inset-0 w-full h-full overflow-hidden opacity-60 pointer-events-none">
+        <iframe
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full scale-[1.5]"
+          src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
+          title="Background video"
+          allow="autoplay; encrypted-media"
+          frameBorder="0"
+        />
+      </div>
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center">
