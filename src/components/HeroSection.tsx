@@ -1,9 +1,35 @@
+import { useState, useEffect } from "react";
 import logo from "@/assets/logo-studio131.png";
 import { motion } from "framer-motion";
 
 const VIDEO_URL = "https://drive.google.com/uc?export=download&id=1jEB0KGbMppQeKKlHUFecgpK2iywPixoA";
 
+const FULL_TEXT = ".We are the team/";
+
 const HeroSection = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (isTyping) {
+      if (displayText.length < FULL_TEXT.length) {
+        timeout = setTimeout(() => setDisplayText(FULL_TEXT.slice(0, displayText.length + 1)), 100);
+      } else {
+        timeout = setTimeout(() => setIsTyping(false), 2000);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => setDisplayText(displayText.slice(0, -1)), 60);
+      } else {
+        timeout = setTimeout(() => setIsTyping(true), 1000);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isTyping]);
+
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden" style={{ backgroundColor: "hsl(0 0% 0%)" }}>
       {/* Video background */}
@@ -59,7 +85,8 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          .We are the team/
+          {displayText}
+          <span className="animate-blink">_</span>
         </motion.h1>
         <motion.p
           className="text-sm tracking-widest uppercase mb-8"
