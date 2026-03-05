@@ -53,7 +53,7 @@ const HeroSection = () => {
         >
           {/* Glass banner */}
           <motion.div
-            className="absolute inset-0 -m-2 rounded-xl"
+            className="absolute inset-0 -m-[2px] rounded-xl"
             style={{
               background: "linear-gradient(135deg, hsla(0,0%,100%,0.08) 0%, hsla(0,0%,100%,0.03) 100%)",
               backdropFilter: "blur(16px)",
