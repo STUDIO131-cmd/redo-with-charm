@@ -1,8 +1,14 @@
 
 
-## Reduzir margem do glass bar
+## Efeito de luz animada vertical no glass banner do logotipo
 
-**Arquivo:** `src/components/HeroSection.tsx`, linha 54
+**Arquivo:** `src/components/HeroSection.tsx`
 
-Alterar a margem negativa de `-m-2` (8px) para `-m-[2px]` no `motion.div` do glass banner, deixando apenas 2px de espaço entre o logotipo e a borda do glass bar.
+Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
+
+- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
+- Largura estreita (~30-40% do container), altura 100%
+- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
+- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
+- `rounded-xl` no container para manter o recorte arredondado
 
