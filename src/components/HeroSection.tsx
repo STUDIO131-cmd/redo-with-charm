@@ -53,7 +53,7 @@ const HeroSection = () => {
         >
           {/* Glass banner */}
           <motion.div
-            className="absolute inset-0 -m-[2px] rounded-xl"
+            className="absolute inset-0 -m-[2px] rounded-xl overflow-hidden"
             style={{
               background: "linear-gradient(135deg, hsla(0,0%,100%,0.08) 0%, hsla(0,0%,100%,0.03) 100%)",
               backdropFilter: "blur(16px)",
@@ -69,7 +69,17 @@ const HeroSection = () => {
               ],
             }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
+          >
+            {/* Animated light sweep */}
+            <motion.div
+              className="absolute top-0 h-full w-[35%] pointer-events-none"
+              style={{
+                background: "linear-gradient(90deg, transparent 0%, hsla(0,0%,100%,0.15) 50%, transparent 100%)",
+              }}
+              animate={{ x: ["-100%", "400%"] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+            />
+          </motion.div>
           <motion.img
             src={logo}
             alt="Studio 131"
