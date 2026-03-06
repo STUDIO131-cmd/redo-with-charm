@@ -66,9 +66,9 @@ const ServicesSection = () => {
           transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
 
         <h2
-          className="text-5xl text-center text-foreground relative z-10 leading-[0.9] font-sans md:text-4xl mb-6 px-6"
+          className="text-2xl md:text-3xl text-center text-foreground relative z-10 font-sans mb-6 px-6"
           style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
-          Marcas que atendemos<br />no decorrer dos anos:
+          Marcas que atendemos no decorrer dos anos:
         </h2>
 
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
