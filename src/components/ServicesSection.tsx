@@ -84,7 +84,8 @@ const ServicesSection = () => {
 
       {/* Título principal */}
       <motion.p
-        className="text-center text-muted-foreground mb-16 text-lg font-display"
+        className="text-center text-muted-foreground mb-16 text-xl md:text-2xl"
+        style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -97,24 +98,25 @@ const ServicesSection = () => {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Card 1 */}
         <motion.div
-          className="rounded-2xl overflow-hidden bg-dark-section"
+          className="rounded-2xl overflow-hidden bg-dark-section flex flex-col"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
-          <div className="p-6 space-y-3">
-            <h3 className="text-xl font-display text-dark-section-foreground">
-              O Plano Profissional: Operação + Consultoria
+          <div className="p-6 space-y-4 flex flex-col flex-1">
+            <h3 className="text-2xl md:text-3xl font-display text-dark-section-foreground">
+              O Plano Profissional<br />
+              Operação + Consultoria
             </h3>
-            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
-            <p className="text-xs font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
+            <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
               Eixos do acompanhamento: Conteúdo · Tráfego · Comercial
             </p>
-            <button className="mt-4 w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+            <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
@@ -123,27 +125,28 @@ const ServicesSection = () => {
 
         {/* Card 2 */}
         <motion.div
-          className="rounded-2xl overflow-hidden bg-dark-section"
+          className="rounded-2xl overflow-hidden bg-dark-section flex flex-col"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
-          <div className="p-6 space-y-3">
-            <h3 className="text-xl font-display text-dark-section-foreground">
-              Campanhas: Personalização + Pontualidade
+          <div className="p-6 space-y-4 flex flex-col flex-1">
+            <h3 className="text-2xl md:text-3xl font-display text-dark-section-foreground">
+              Campanhas<br />
+              Personalização + Pontualidade
             </h3>
-            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
               Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
             </p>
-            <ul className="text-xs font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+            <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
               <li>— Lançamentos de marca ou produto</li>
               <li>— Rebranding e reposicionamento</li>
               <li>— Datas comerciais estratégicas</li>
               <li>— Campanhas institucionais ou promocionais</li>
             </ul>
-            <button className="mt-4 w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+            <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
