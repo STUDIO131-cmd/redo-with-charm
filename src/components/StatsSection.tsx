@@ -12,14 +12,15 @@ const StatsSection = () => {
       <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-stretch">
         {/* Left: YouTube video */}
         <motion.div
-          className="relative rounded-2xl overflow-hidden bg-primary aspect-[4/3]"
+          className="relative rounded-2xl overflow-hidden bg-primary"
+          style={{ paddingBottom: "75%" }}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <iframe
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full pointer-events-none"
             src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
             title="Studio 131 video"
             allow="autoplay; encrypted-media"
