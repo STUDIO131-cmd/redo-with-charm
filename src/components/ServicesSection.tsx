@@ -145,7 +145,7 @@ const ServicesSection = () => {
                Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
              </p>
               <ul className="text-sm font-body space-y-1 mb-4" style={{ color: "hsl(0,0%,50%)" }}>
-                <li className="my-px">— Lançamentos de marca ou produto</li>
+                <li className="my-[3px]">— Lançamentos de marca ou produto</li>
                <li className="my-px">— Rebranding e reposicionamento</li>
                <li className="my-px">— Datas comerciais estratégicas</li>
                <li className="my-px">— Campanhas institucionais ou promocionais</li>
