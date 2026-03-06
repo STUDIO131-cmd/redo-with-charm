@@ -8,7 +8,11 @@ import carousel6 from "@/assets/carousel-6.jpg";
 import carousel7 from "@/assets/carousel-7.jpg";
 import carousel8 from "@/assets/carousel-8.jpg";
 
-const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6, carousel7, carousel8];
+const row1 = [carousel1, carousel2, carousel3, carousel4];
+const row2 = [carousel5, carousel6, carousel7, carousel8];
+
+const sizes1 = ["w-72 h-56", "w-56 h-72", "w-80 h-60", "w-64 h-80"];
+const sizes2 = ["w-64 h-72", "w-80 h-56", "w-56 h-64", "w-72 h-80"];
 
 const CarouselSection = () => {
   return (
@@ -18,7 +22,6 @@ const CarouselSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}>
-        
         Aqui construímos uma<br />Jornada de Ascensão.
       </motion.h2>
       <motion.p
@@ -27,28 +30,42 @@ const CarouselSection = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}>
-        
         Esse é o nosso lema!
       </motion.p>
 
-      <div className="relative w-full overflow-hidden">
-        <div className="flex animate-scroll-left" style={{ width: "fit-content" }}>
-          {[...images, ...images].map((img, i) =>
-          <div
-            key={i}
-            className="flex-shrink-0 w-64 md:w-80 mx-3">
-            
-              <img
-              src={img}
-              alt={`Projeto ${i % images.length + 1}`}
-              className="w-full h-64 md:h-80 object-cover rounded-lg" />
-            
-            </div>
-          )}
+      <div className="space-y-4">
+        {/* Row 1 - scrolls left */}
+        <div className="relative w-full overflow-hidden">
+          <div className="flex animate-scroll-left gap-4" style={{ width: "fit-content" }}>
+            {[...row1, ...row1, ...row1].map((img, i) => (
+              <div key={`r1-${i}`} className={`flex-shrink-0 ${sizes1[i % row1.length]}`}>
+                <img
+                  src={img}
+                  alt={`Projeto ${(i % row1.length) + 1}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 - scrolls right */}
+        <div className="relative w-full overflow-hidden">
+          <div className="flex animate-scroll-right gap-4" style={{ width: "fit-content" }}>
+            {[...row2, ...row2, ...row2].map((img, i) => (
+              <div key={`r2-${i}`} className={`flex-shrink-0 ${sizes2[i % row2.length]}`}>
+                <img
+                  src={img}
+                  alt={`Projeto ${(i % row2.length) + 5}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default CarouselSection;
