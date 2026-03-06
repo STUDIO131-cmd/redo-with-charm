@@ -46,7 +46,7 @@ const ServicesSection = () => {
     <section className="px-6 py-20 max-w-5xl mx-auto">
       {/* Glass Button */}
       <motion.div
-        className="flex justify-center mb-6"
+        className="flex justify-center mb-3"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
