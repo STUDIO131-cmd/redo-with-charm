@@ -64,12 +64,16 @@ const ServicesSection = () => {
       {/* Client Logo Slider */}
       <div className="relative w-full overflow-hidden mb-20">
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
-          {[...placeholderClients, ...placeholderClients].map((client, i) => (
+          {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center rounded-lg border border-border bg-card/50"
+              className="flex-shrink-0 w-40 h-40 mx-4"
             >
-              <client.icon className="w-8 h-8 text-muted-foreground" />
+              <img
+                src={client.img}
+                alt={client.name}
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           ))}
         </div>
