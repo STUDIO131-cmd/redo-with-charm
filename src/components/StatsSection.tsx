@@ -20,7 +20,7 @@ const StatsSection = () => {
         >
           <div className="relative w-full h-full rounded-xl overflow-hidden">
             <iframe
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              className="absolute inset-0 w-full h-full pointer-events-none scale-[1.35]"
               src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
               title="Studio 131 video"
               allow="autoplay; encrypted-media"
