@@ -34,30 +34,11 @@ const StatsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={current}
-              src={images[current]}
-              alt={`Projeto ${current + 1}`}
-              className="w-full h-full object-cover"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.8 }}
-            />
-          </AnimatePresence>
-
-          {/* Glass bar overlay */}
-          <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute top-0 h-full w-[35%]"
-              style={{
-                background: "linear-gradient(90deg, transparent 0%, hsla(0,0%,100%,0.12) 50%, transparent 100%)",
-              }}
-              animate={{ x: ["-100%", "400%"] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
-            />
-          </div>
+          <img
+            src={images[current]}
+            alt={`Projeto ${current + 1}`}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
         {/* Right: Stats content */}
