@@ -31,29 +31,29 @@ const CarouselSection = () => {
       </motion.p>
 
       <div className="max-w-7xl mx-auto space-y-3">
-        {[row1, row2].map((row, rowIdx) => (
-          <div key={rowIdx} className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {row.map((img, i) => (
-              <motion.div
-                key={i}
-                className="overflow-hidden rounded-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (rowIdx * 4 + i) * 0.05 }}
-              >
+        {[row1, row2].map((row, rowIdx) =>
+        <div key={rowIdx} className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {row.map((img, i) =>
+          <motion.div
+            key={i}
+            className="overflow-hidden rounded-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: (rowIdx * 4 + i) * 0.05 }}>
+            
                 <img
-                  src={img}
-                  alt={`Projeto ${rowIdx * 4 + i + 1}`}
-                  className="w-full h-auto object-contain"
-                />
+              src={img}
+              alt={`Projeto ${rowIdx * 4 + i + 1}`}
+              className="w-full h-auto object-cover" />
+            
               </motion.div>
-            ))}
+          )}
           </div>
-        ))}
+        )}
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default CarouselSection;
