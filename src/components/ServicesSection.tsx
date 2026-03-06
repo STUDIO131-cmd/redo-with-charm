@@ -72,7 +72,7 @@ const ServicesSection = () => {
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
           />
           <h2
-            className="text-5xl md:text-6xl text-center text-foreground relative z-10leading-[0.9]"
+            className="text-5xl md:text-6xl text-center text-foreground relative z-10 leading-[0.9]"
             style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 700 }}
           >
             Marcas que atendemos<br />no decorrer dos anos:
