@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import carousel1 from "@/assets/carousel-1.jpg";
 import carousel2 from "@/assets/carousel-2.jpg";
 import carousel3 from "@/assets/carousel-3.jpg";
-import carousel4 from "@/assets/carousel-4.jpg";
+const carousel4 = "/lovable-uploads/80e00f05-42dc-43c1-a941-e40b6b1c9743.jpg";
 import carousel5 from "@/assets/carousel-5.jpg";
 import carousel6 from "@/assets/carousel-6.jpg";
 import carousel7 from "@/assets/carousel-7.jpg";
