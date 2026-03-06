@@ -11,6 +11,14 @@ import clientAnaFlavia from "@/assets/client-anaflavia.png";
 import clientCarol from "@/assets/client-carol.png";
 import clientCristiano from "@/assets/client-cristiano.png";
 import clientOuromil from "@/assets/client-ouromil.png";
+import clientJoiasTereza from "@/assets/client-joias-tereza.png";
+import clientBrenda from "@/assets/client-brenda.png";
+import clientAngelo from "@/assets/client-angelo.png";
+import clientLavie from "@/assets/client-lavie.png";
+import clientFernanda from "@/assets/client-fernanda.png";
+import clientGiovana from "@/assets/client-giovana.png";
+import clientAuramia from "@/assets/client-auramia.png";
+import clientAclari from "@/assets/client-aclari.png";
 
 const clients = [
   { name: "Dani Fernandes Aromas", img: clientDani },
@@ -23,6 +31,14 @@ const clients = [
   { name: "Carol Segura", img: clientCarol },
   { name: "Cristiano Herrera", img: clientCristiano },
   { name: "Ouromil Joias", img: clientOuromil },
+  { name: "Joias de Tereza", img: clientJoiasTereza },
+  { name: "Brenda Braga", img: clientBrenda },
+  { name: "Angelo Favero", img: clientAngelo },
+  { name: "La Vie", img: clientLavie },
+  { name: "Fernanda Giacomini", img: clientFernanda },
+  { name: "Giovana Assad", img: clientGiovana },
+  { name: "Auramia", img: clientAuramia },
+  { name: "Aclari", img: clientAclari },
 ];
 
 const ServicesSection = () => {
@@ -67,7 +83,7 @@ const ServicesSection = () => {
           {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-40 h-40 mx-4"
+              className="flex-shrink-0 w-64 h-64 mx-4"
             >
               <img
                 src={client.img}
