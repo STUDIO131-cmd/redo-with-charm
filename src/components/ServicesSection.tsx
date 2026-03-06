@@ -55,11 +55,11 @@ const ServicesSection = () => {
         <div
           className="relative rounded-xl overflow-hidden px-8 py-5"
           style={{
-            background: "linear-gradient(135deg, hsla(0,0%,100%,0.08) 0%, hsla(0,0%,100%,0.03) 100%)",
+           background: "linear-gradient(135deg, hsla(0,0%,0%,0.06) 0%, hsla(0,0%,0%,0.03) 100%)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
-            border: "1px solid hsla(0,0%,0%,0.08)",
-            boxShadow: "0 8px 32px hsla(0,0%,0%,0.06), inset 0 1px 0 hsla(0,0%,100%,0.6)",
+            border: "1px solid hsla(0,0%,0%,0.10)",
+            boxShadow: "0 8px 32px hsla(0,0%,0%,0.08), inset 0 1px 0 hsla(0,0%,100%,0.3)",
           }}
         >
           {/* Light sweep */}
@@ -78,7 +78,7 @@ const ServicesSection = () => {
       </motion.div>
 
       {/* Client Logo Slider */}
-      <div className="relative w-full overflow-hidden mb-20">
+      <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20">
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
           {[...clients, ...clients].map((client, i) => (
             <div
