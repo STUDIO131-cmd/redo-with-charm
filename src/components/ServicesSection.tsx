@@ -104,7 +104,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}>
           
-          <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
+          <img alt="O Plano Profissional" className="w-full object-cover" src="/lovable-uploads/c18b8aa1-0fc6-4c13-8626-86f91cd6b135.png" />
            <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
                O Plano Profissional<br />
