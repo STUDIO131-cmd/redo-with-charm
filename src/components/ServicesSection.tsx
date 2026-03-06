@@ -73,24 +73,24 @@ const ServicesSection = () => {
 
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
           {[...clients, ...clients].map((client, i) =>
-            <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
+          <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
               <img
-                src={client.img}
-                alt={client.name}
-                className="w-full h-full object-cover rounded-full" />
+              src={client.img}
+              alt={client.name}
+              className="w-full h-full object-cover rounded-full" />
             </div>
           )}
         </div>
       </div>
 
-      <motion.h2
-        className="text-2xl md:text-3xl font-display text-center mb-4 text-foreground"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}>
-        
-        Sustentar decisões estratégicas ao longo do tempo é o que separa marcas comuns de marcas fortes.
-      </motion.h2>
+      
+
+
+
+
+
+
+      
       <motion.p
         className="text-center text-muted-foreground mb-16 text-lg font-display"
         initial={{ opacity: 0 }}
