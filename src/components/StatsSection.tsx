@@ -50,7 +50,7 @@ const StatsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-4xl font-display text-primary-foreground mb-3">
-            Aqui construímos uma jornada de ascensão:
+            Aqui construímos<br />uma Jornada de<br />Ascensão:
           </h2>
           <p className="text-primary-foreground/60 font-body text-base mb-8">
             ► Bebemos da nossa fonte;
