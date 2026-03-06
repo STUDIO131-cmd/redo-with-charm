@@ -46,13 +46,14 @@ const ServicesSection = () => {
     <section className="px-6 py-20 max-w-5xl mx-auto">
       {/* Glass Button */}
       <motion.div
-        className="flex justify-center mb-6"
+        className="flex justify-center mb-3"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}>
         
-        className="flex justify-center mb-3"
+        <div
+          className="relative rounded-xl overflow-hidden px-8 py-5"
           style={{
             background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
             backdropFilter: "blur(16px)",
