@@ -22,25 +22,25 @@ import clientAuramia from "@/assets/client-auramia.png";
 import clientAclari from "@/assets/client-aclari.png";
 
 const clients = [
-  { name: "Dani Fernandes Aromas", img: clientDani },
-  { name: "CIMPLES by Carolina Ferraz", img: clientCimples },
-  { name: "Thais Fernandes", img: clientThais },
-  { name: "Henry Luchetti", img: clientHenry },
-  { name: "Corpo de Ballet", img: clientBallet },
-  { name: "Adriano Martin", img: clientAdriano },
-  { name: "Ana Flávia Roland", img: clientAnaFlavia },
-  { name: "Carol Segura", img: clientCarol },
-  { name: "Cristiano Herrera", img: clientCristiano },
-  { name: "Ouromil Joias", img: clientOuromil },
-  { name: "Joias de Tereza", img: clientJoiasTereza },
-  { name: "Brenda Braga", img: clientBrenda },
-  { name: "Angelo Favero", img: clientAngelo },
-  { name: "La Vie", img: clientLavie },
-  { name: "Fernanda Giacomini", img: clientFernanda },
-  { name: "Giovana Assad", img: clientGiovana },
-  { name: "Auramia", img: clientAuramia },
-  { name: "Aclari", img: clientAclari },
-];
+{ name: "Dani Fernandes Aromas", img: clientDani },
+{ name: "CIMPLES by Carolina Ferraz", img: clientCimples },
+{ name: "Thais Fernandes", img: clientThais },
+{ name: "Henry Luchetti", img: clientHenry },
+{ name: "Corpo de Ballet", img: clientBallet },
+{ name: "Adriano Martin", img: clientAdriano },
+{ name: "Ana Flávia Roland", img: clientAnaFlavia },
+{ name: "Carol Segura", img: clientCarol },
+{ name: "Cristiano Herrera", img: clientCristiano },
+{ name: "Ouromil Joias", img: clientOuromil },
+{ name: "Joias de Tereza", img: clientJoiasTereza },
+{ name: "Brenda Braga", img: clientBrenda },
+{ name: "Angelo Favero", img: clientAngelo },
+{ name: "La Vie", img: clientLavie },
+{ name: "Fernanda Giacomini", img: clientFernanda },
+{ name: "Giovana Assad", img: clientGiovana },
+{ name: "Auramia", img: clientAuramia },
+{ name: "Aclari", img: clientAclari }];
+
 
 const ServicesSection = () => {
   return (
@@ -54,31 +54,31 @@ const ServicesSection = () => {
           WebkitBackdropFilter: "blur(16px)",
           borderTop: "1px solid hsla(0,0%,0%,0.14)",
           borderBottom: "1px solid hsla(0,0%,0%,0.14)",
-          boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)",
-        }}
-      >
+          boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)"
+        }}>
+        
         <motion.div
           className="absolute top-0 h-full w-[35%] pointer-events-none"
           style={{
-            background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)",
+            background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)"
           }}
           animate={{ x: ["-100%", "400%"] }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
-        />
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
+        
 
         <h2
           className="text-2xl md:text-3xl text-center text-foreground relative z-10 font-sans mb-6 px-6"
-          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
-        >
+          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
+          
           Marcas que atendemos no decorrer dos anos:
         </h2>
 
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
-          {[...clients, ...clients].map((client, i) => (
-            <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
+          {[...clients, ...clients].map((client, i) =>
+          <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
               <img src={client.img} alt={client.name} className="w-full h-full object-cover rounded-full" />
             </div>
-          ))}
+          )}
         </div>
       </div>
 
@@ -89,8 +89,8 @@ const ServicesSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-      >
+        transition={{ delay: 0.2 }}>
+        
         Como agência atuamos em duas principais frentes:
       </motion.p>
 
@@ -102,11 +102,11 @@ const ServicesSection = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
+          
           <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
           <div className="p-6 space-y-4 flex flex-col flex-1">
-            <h3 className="text-2xl md:text-3xl font-display text-dark-section-foreground">
+            <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
               O Plano Profissional<br />
               Operação + Consultoria
             </h3>
@@ -114,7 +114,8 @@ const ServicesSection = () => {
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
             <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
-              Eixos do acompanhamento: Conteúdo · Tráfego · Comercial
+              Eixos do acompanhamento: 
+Conteúdo · Tráfego · Comercial
             </p>
             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
@@ -124,16 +125,15 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Card 2 */}
-        <motion.div
-          className="rounded-2xl overflow-hidden bg-dark-section flex flex-col"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <motion.div className="rounded-2xl overflow-hidden bg-dark-section flex flex-col"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}>
+          
           <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
           <div className="p-6 space-y-4 flex flex-col flex-1">
-            <h3 className="text-2xl md:text-3xl font-display text-dark-section-foreground">
+            <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
               Campanhas<br />
               Personalização + Pontualidade
             </h3>
@@ -153,8 +153,8 @@ const ServicesSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ServicesSection;
