@@ -83,7 +83,7 @@ const ServicesSection = () => {
           {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-40 h-40 mx-4"
+              className="flex-shrink-0 w-64 h-64 mx-4"
             >
               <img
                 src={client.img}
