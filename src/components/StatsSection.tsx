@@ -19,16 +19,16 @@ const StatsSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="px-6 py-16 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-stretch">
         {/* Left: Photo slider with glass effect */}
         <motion.div
-          className="relative rounded-2xl overflow-hidden bg-primary min-h-[400px] md:min-h-[500px]"
+          className="relative rounded-2xl overflow-hidden bg-primary"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -39,7 +39,7 @@ const StatsSection = () => {
               key={current}
               src={images[current]}
               alt={`Projeto ${current + 1}`}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-full object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -58,19 +58,6 @@ const StatsSection = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
             />
           </div>
-
-          {/* Slide indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === current ? "bg-accent w-6" : "bg-primary-foreground/40"
-                }`}
-              />
-            ))}
-          </div>
         </motion.div>
 
         {/* Right: Stats content */}
@@ -81,14 +68,14 @@ const StatsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-3xl font-display text-primary-foreground mb-2">
+          <h2 className="text-2xl md:text-4xl font-display text-primary-foreground mb-3">
             Aqui construímos uma jornada de ascensão:
           </h2>
-          <p className="text-primary-foreground/60 font-body text-sm mb-8">
+          <p className="text-primary-foreground/60 font-body text-base mb-8">
             ► Bebemos da nossa fonte;
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-7">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -97,7 +84,7 @@ const StatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <p className="text-primary-foreground/70 text-sm font-body">
+                <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed font-body">
                   <span className="text-accent mr-1">❖</span>
                   <span className="text-accent font-semibold">
                     {stat.value} {stat.label}
