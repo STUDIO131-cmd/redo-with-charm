@@ -1,11 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import carousel1 from "@/assets/carousel-1.jpg";
-import carousel2 from "@/assets/carousel-2.jpg";
-import carousel3 from "@/assets/carousel-3.jpg";
-import carousel4 from "@/assets/carousel-4.jpg";
-
-const images = [carousel1, carousel2, carousel3, carousel4];
+import { motion } from "framer-motion";
 
 const stats = [
   { value: "5x", label: "crescimento em 4 anos:", desc: "multiplicamos por 5 vezes nosso faturamento." },
@@ -14,30 +7,24 @@ const stats = [
 ];
 
 const StatsSection = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="px-6 py-16 max-w-6xl mx-auto">
       <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-stretch">
-        {/* Left: Photo slider with glass effect */}
+        {/* Left: YouTube video */}
         <motion.div
-          className="relative rounded-2xl overflow-hidden bg-primary"
+          className="relative rounded-2xl overflow-hidden bg-primary aspect-[4/3]"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <img
-            src={images[current]}
-            alt={`Projeto ${current + 1}`}
-            className="w-full h-full object-cover"
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
+            title="Studio 131 video"
+            allow="autoplay; encrypted-media"
+            frameBorder="0"
+            style={{ border: 0 }}
           />
         </motion.div>
 
