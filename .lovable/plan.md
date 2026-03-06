@@ -1,24 +1,14 @@
 
 
-## Ajustar seção de serviços para match com o design
+## Efeito de luz animada vertical no glass banner do logotipo
 
-**Arquivo:** `src/components/ServicesSection.tsx`
+**Arquivo:** `src/components/HeroSection.tsx`
 
-### Mudanças
+Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
 
-1. **Título principal** — Aumentar fonte para `text-3xl md:text-4xl`, usar font-display (Playfair Display) como no design, centralizado
-
-2. **Cards escuros** — Envolver cada serviço em um card com:
-   - `bg-[hsl(0,0%,10%)]` (fundo escuro/preto)
-   - `rounded-2xl` com padding interno (`p-6`)
-   - Imagem no topo dentro do card (antes do título)
-
-3. **Reordenar conteúdo** — Mover a imagem para CIMA do título em cada card (no design, a imagem vem primeiro)
-
-4. **Botão "Clique: MAIS INFORMAÇÕES"** — Adicionar em cada card:
-   - Fundo dourado/accent (`bg-[hsl(36,95%,80%)]`)
-   - Texto escuro, ícone de QR/grid à esquerda
-   - Arredondado, centralizado na base do card
-
-5. **Textos dentro dos cards** — Cores claras (`text-white`, `text-gray-400`) para contraste com fundo escuro
+- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
+- Largura estreita (~30-40% do container), altura 100%
+- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
+- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
+- `rounded-xl` no container para manter o recorte arredondado
 

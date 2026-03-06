@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { LayoutGrid } from "lucide-react";
 import servicePlano from "@/assets/service-plano.png";
 import serviceCampanhas from "@/assets/service-campanhas.png";
 import clientDani from "@/assets/client-dani.png";
@@ -21,25 +22,25 @@ import clientAuramia from "@/assets/client-auramia.png";
 import clientAclari from "@/assets/client-aclari.png";
 
 const clients = [
-{ name: "Dani Fernandes Aromas", img: clientDani },
-{ name: "CIMPLES by Carolina Ferraz", img: clientCimples },
-{ name: "Thais Fernandes", img: clientThais },
-{ name: "Henry Luchetti", img: clientHenry },
-{ name: "Corpo de Ballet", img: clientBallet },
-{ name: "Adriano Martin", img: clientAdriano },
-{ name: "Ana Flávia Roland", img: clientAnaFlavia },
-{ name: "Carol Segura", img: clientCarol },
-{ name: "Cristiano Herrera", img: clientCristiano },
-{ name: "Ouromil Joias", img: clientOuromil },
-{ name: "Joias de Tereza", img: clientJoiasTereza },
-{ name: "Brenda Braga", img: clientBrenda },
-{ name: "Angelo Favero", img: clientAngelo },
-{ name: "La Vie", img: clientLavie },
-{ name: "Fernanda Giacomini", img: clientFernanda },
-{ name: "Giovana Assad", img: clientGiovana },
-{ name: "Auramia", img: clientAuramia },
-{ name: "Aclari", img: clientAclari }];
-
+  { name: "Dani Fernandes Aromas", img: clientDani },
+  { name: "CIMPLES by Carolina Ferraz", img: clientCimples },
+  { name: "Thais Fernandes", img: clientThais },
+  { name: "Henry Luchetti", img: clientHenry },
+  { name: "Corpo de Ballet", img: clientBallet },
+  { name: "Adriano Martin", img: clientAdriano },
+  { name: "Ana Flávia Roland", img: clientAnaFlavia },
+  { name: "Carol Segura", img: clientCarol },
+  { name: "Cristiano Herrera", img: clientCristiano },
+  { name: "Ouromil Joias", img: clientOuromil },
+  { name: "Joias de Tereza", img: clientJoiasTereza },
+  { name: "Brenda Braga", img: clientBrenda },
+  { name: "Angelo Favero", img: clientAngelo },
+  { name: "La Vie", img: clientLavie },
+  { name: "Fernanda Giacomini", img: clientFernanda },
+  { name: "Giovana Assad", img: clientGiovana },
+  { name: "Auramia", img: clientAuramia },
+  { name: "Aclari", img: clientAclari },
+];
 
 const ServicesSection = () => {
   return (
@@ -53,108 +54,104 @@ const ServicesSection = () => {
           WebkitBackdropFilter: "blur(16px)",
           borderTop: "1px solid hsla(0,0%,0%,0.14)",
           borderBottom: "1px solid hsla(0,0%,0%,0.14)",
-          boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)"
-        }}>
-
-        {/* Light sweep */}
+          boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)",
+        }}
+      >
         <motion.div
           className="absolute top-0 h-full w-[35%] pointer-events-none"
           style={{
-            background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)"
+            background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)",
           }}
           animate={{ x: ["-100%", "400%"] }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+        />
 
         <h2
           className="text-2xl md:text-3xl text-center text-foreground relative z-10 font-sans mb-6 px-6"
-          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
+          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
+        >
           Marcas que atendemos no decorrer dos anos:
         </h2>
 
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
-          {[...clients, ...clients].map((client, i) =>
-          <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
-              <img
-              src={client.img}
-              alt={client.name}
-              className="w-full h-full object-cover rounded-full" />
+          {[...clients, ...clients].map((client, i) => (
+            <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
+              <img src={client.img} alt={client.name} className="w-full h-full object-cover rounded-full" />
             </div>
-          )}
+          ))}
         </div>
       </div>
 
-      
-
-
-
-
-
-
-      
+      {/* Título principal */}
       <motion.p
         className="text-center text-muted-foreground mb-16 text-lg font-display"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2 }}>
-        
+        transition={{ delay: 0.2 }}
+      >
         Como agência atuamos em duas principais frentes:
       </motion.p>
 
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* Service 1 */}
+      {/* Cards de serviços */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Card 1 */}
         <motion.div
-          className="space-y-4"
+          className="rounded-2xl overflow-hidden bg-dark-section"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}>
-          
-          <h3 className="text-xl font-display text-foreground">
-            O Plano Profissional: Operação + Consultoria
-          </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed font-body">
-            Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
-          </p>
-          <p className="text-muted-foreground text-xs font-body tracking-wide">
-            Eixos do acompanhamento: Conteúdo · Tráfego · Comercial
-          </p>
-          <img
-            src={servicePlano}
-            alt="O Plano Profissional"
-            className="w-full rounded-lg mt-4" />
-          
+          transition={{ duration: 0.6 }}
+        >
+          <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
+          <div className="p-6 space-y-3">
+            <h3 className="text-xl font-display text-dark-section-foreground">
+              O Plano Profissional: Operação + Consultoria
+            </h3>
+            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+              Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
+            </p>
+            <p className="text-xs font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
+              Eixos do acompanhamento: Conteúdo · Tráfego · Comercial
+            </p>
+            <button className="mt-4 w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+              <LayoutGrid className="w-4 h-4" />
+              Clique: MAIS INFORMAÇÕES
+            </button>
+          </div>
         </motion.div>
 
-        {/* Service 2 */}
+        {/* Card 2 */}
         <motion.div
-          className="space-y-4"
+          className="rounded-2xl overflow-hidden bg-dark-section"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}>
-          
-          <h3 className="text-xl font-display text-foreground">
-            Campanhas: Personalização + Pontualidade
-          </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed font-body">
-            Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
-          </p>
-          <ul className="text-muted-foreground text-xs font-body space-y-1">
-            <li>— Lançamentos de marca ou produto</li>
-            <li>— Rebranding e reposicionamento</li>
-            <li>— Datas comerciais estratégicas</li>
-            <li>— Campanhas institucionais ou promocionais</li>
-          </ul>
-          <img
-            src={serviceCampanhas}
-            alt="Campanhas"
-            className="w-full rounded-lg mt-4" />
-          
+          transition={{ duration: 0.6 }}
+        >
+          <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
+          <div className="p-6 space-y-3">
+            <h3 className="text-xl font-display text-dark-section-foreground">
+              Campanhas: Personalização + Pontualidade
+            </h3>
+            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+              Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
+            </p>
+            <ul className="text-xs font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+              <li>— Lançamentos de marca ou produto</li>
+              <li>— Rebranding e reposicionamento</li>
+              <li>— Datas comerciais estratégicas</li>
+              <li>— Campanhas institucionais ou promocionais</li>
+            </ul>
+            <button className="mt-4 w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+              <LayoutGrid className="w-4 h-4" />
+              Clique: MAIS INFORMAÇÕES
+            </button>
+          </div>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default ServicesSection;
