@@ -8,16 +8,8 @@ import carousel6 from "@/assets/carousel-6.jpg";
 import carousel7 from "@/assets/carousel-7.jpg";
 import carousel8 from "@/assets/carousel-8.jpg";
 
-const images = [
-  { src: carousel1, alt: "Projeto 1", className: "md:row-span-2" },
-  { src: carousel2, alt: "Projeto 2", className: "" },
-  { src: carousel3, alt: "Projeto 3", className: "" },
-  { src: carousel4, alt: "Projeto 4", className: "md:row-span-2" },
-  { src: carousel5, alt: "Projeto 5", className: "" },
-  { src: carousel6, alt: "Projeto 6", className: "" },
-  { src: carousel7, alt: "Projeto 7", className: "" },
-  { src: carousel8, alt: "Projeto 8", className: "" },
-];
+const row1 = [carousel1, carousel2, carousel3, carousel4];
+const row2 = [carousel5, carousel6, carousel7, carousel8];
 
 const CarouselSection = () => {
   return (
@@ -38,22 +30,26 @@ const CarouselSection = () => {
         Esse é o nosso lema!
       </motion.p>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 auto-rows-[200px] md:auto-rows-[220px]">
-        {images.map((img, i) => (
-          <motion.div
-            key={i}
-            className={`overflow-hidden rounded-2xl ${img.className}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+      <div className="max-w-7xl mx-auto space-y-3">
+        {[row1, row2].map((row, rowIdx) => (
+          <div key={rowIdx} className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {row.map((img, i) => (
+              <motion.div
+                key={i}
+                className="overflow-hidden rounded-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (rowIdx * 4 + i) * 0.05 }}
+              >
+                <img
+                  src={img}
+                  alt={`Projeto ${rowIdx * 4 + i + 1}`}
+                  className="w-full h-auto object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
         ))}
       </div>
     </section>
