@@ -1,14 +1,19 @@
 
 
-## Efeito de luz animada vertical no glass banner do logotipo
+## Equalizar botões dos cards adicionando espaçamento no Card 2
 
-**Arquivo:** `src/components/HeroSection.tsx`
+**Arquivo:** `src/components/ServicesSection.tsx`
 
-Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
+**Análise:** Ambos os cards já têm `flex-1` e `mt-auto`, mas os botões podem ficar desalinhados se as imagens tiverem alturas diferentes ou se o conteúdo textual não compensar. O Card 1 tem um parágrafo extra ("Eixos do acompanhamento:") + 3 itens, enquanto o Card 2 tem 4 itens sem título.
 
-- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
-- Largura estreita (~30-40% do container), altura 100%
-- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
-- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
-- `rounded-xl` no container para manter o recorte arredondado
+**Alteração:** Adicionar `mb-4` à `<ul>` do Card 2 (linha 147) para criar espaçamento extra após a última linha da lista, compensando a diferença de conteúdo:
+
+```tsx
+// Linha 147: de
+<ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+// para
+<ul className="text-sm font-body space-y-1 mb-4" style={{ color: "hsl(0,0%,50%)" }}>
+```
+
+Caso `mb-4` não seja suficiente, pode ser ajustado para `mb-6` ou `mb-8`.
 
