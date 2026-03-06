@@ -1,17 +1,14 @@
 
 
-## Corrigir espaço extra abaixo do botão no Card 1
+## Efeito de luz animada vertical no glass banner do logotipo
 
-**Problema:** O `mt-auto` no botão do Card 1 empurra o botão para baixo mas como o Card 2 tem mais conteúdo (4 itens de lista), o Card 1 fica com espaço vazio entre o texto "Eixos do acompanhamento" e o botão.
+**Arquivo:** `src/components/HeroSection.tsx`
 
-**Solução:** Remover `flex-1` do container interno e `mt-auto` do botão em ambos os cards. Em vez disso, deixar os cards com altura automática independente (não forçar mesma altura). Isso elimina o espaço extra.
+Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
 
-**Arquivo:** `src/components/ServicesSection.tsx`
-
-- Linha 108: remover `flex-1` → `<div className="p-6 space-y-4 flex flex-col">`
-- Linha 120: remover `mt-auto` do botão
-- Linha 135: remover `flex-1` → `<div className="p-6 space-y-4 flex flex-col">`  
-- Linha 149: remover `mt-auto` do botão
-
-Ambos os cards terão altura natural baseada no conteúdo, sem espaço forçado.
+- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
+- Largura estreita (~30-40% do container), altura 100%
+- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
+- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
+- `rounded-xl` no container para manter o recorte arredondado
 

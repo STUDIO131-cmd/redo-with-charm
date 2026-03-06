@@ -105,19 +105,19 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}>
           
           <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
-          <div className="p-6 space-y-4 flex flex-col flex-1">
-            <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
-              O Plano Profissional<br />
-              Operação + Consultoria
-            </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
-              Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
-            </p>
-            <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
-              Eixos do acompanhamento: 
-Conteúdo · Tráfego · Comercial
-            </p>
-            <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+           <div className="p-6 space-y-4 flex flex-col">
+             <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
+               O Plano Profissional<br />
+               Operação + Consultoria
+             </h3>
+             <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
+             </p>
+             <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
+               Eixos do acompanhamento: 
+ Conteúdo · Tráfego · Comercial
+             </p>
+             <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
@@ -132,21 +132,21 @@ Conteúdo · Tráfego · Comercial
         transition={{ duration: 0.6 }}>
           
           <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
-          <div className="p-6 space-y-4 flex flex-col flex-1">
-            <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
-              Campanhas<br />
-              Personalização + Pontualidade
-            </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
-              Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
-            </p>
-            <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
-              <li>— Lançamentos de marca ou produto</li>
-              <li>— Rebranding e reposicionamento</li>
-              <li>— Datas comerciais estratégicas</li>
-              <li>— Campanhas institucionais ou promocionais</li>
-            </ul>
-            <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+           <div className="p-6 space-y-4 flex flex-col">
+             <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
+               Campanhas<br />
+               Personalização + Pontualidade
+             </h3>
+             <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+               Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
+             </p>
+             <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+               <li>— Lançamentos de marca ou produto</li>
+               <li>— Rebranding e reposicionamento</li>
+               <li>— Datas comerciais estratégicas</li>
+               <li>— Campanhas institucionais ou promocionais</li>
+             </ul>
+             <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
