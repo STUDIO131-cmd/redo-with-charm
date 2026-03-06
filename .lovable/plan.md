@@ -1,14 +1,16 @@
 
 
-## Efeito de luz animada vertical no glass banner do logotipo
+## Ajustes no título do CarouselSection
 
-**Arquivo:** `src/components/HeroSection.tsx`
+**Arquivo:** `src/components/CarouselSection.tsx`
 
-Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
+### Alterações:
 
-- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
-- Largura estreita (~30-40% do container), altura 100%
-- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
-- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
-- `rounded-xl` no container para manter o recorte arredondado
+1. **Quebrar texto em duas linhas** (linha 19): Adicionar `<br />` entre "uma" e "Jornada"
+   - De: `Aqui construímos uma Jornada de Ascensão.`
+   - Para: `Aqui construímos uma<br />Jornada de Ascensão.`
+
+2. **Reduzir espaçamento entre linhas** (linha 17): Adicionar `leading-tight` à classe do `h2`
+
+3. **Reduzir espaçamento da seção** (linha 15): Reduzir `py-20` para `py-10` ou `py-12` na `<section>` do CarouselSection
 
