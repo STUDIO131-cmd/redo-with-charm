@@ -1,25 +1,14 @@
 
 
-## Transformar "Eixos do acompanhamento" em lista no Card 1
+## Efeito de luz animada vertical no glass banner do logotipo
 
-**Arquivo:** `src/components/ServicesSection.tsx`
+**Arquivo:** `src/components/HeroSection.tsx`
 
-Substituir o parágrafo atual (linhas ~117-119):
-```tsx
-<p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
-  Eixos do acompanhamento: Conteúdo · Tráfego · Comercial
-</p>
-```
+Adicionar um pseudo-elemento (via `motion.div` filho) dentro do glass banner que simula uma faixa de luz vertical percorrendo da esquerda para a direita continuamente:
 
-Por uma lista no mesmo estilo do Card 2:
-```tsx
-<p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
-  Eixos do acompanhamento:
-</p>
-<ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
-  <li>— Estratégia de conteúdo</li>
-  <li>— Tráfego Pago</li>
-  <li>— Acompanhamento Comercial</li>
-</ul>
-```
+- Um `motion.div` absoluto dentro do glass banner com gradiente linear vertical (transparente → branco 15% opacidade → transparente)
+- Largura estreita (~30-40% do container), altura 100%
+- Animação com `framer-motion` movendo `x` de `-100%` a `200%` em loop infinito (~3-4s), com ease suave
+- `overflow-hidden` no container do glass para esconder a faixa fora dos limites
+- `rounded-xl` no container para manter o recorte arredondado
 

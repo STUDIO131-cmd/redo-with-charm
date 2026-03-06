@@ -113,10 +113,14 @@ const ServicesSection = () => {
              <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
                Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
              </p>
-             <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
-               Eixos do acompanhamento: 
- Conteúdo · Tráfego · Comercial
-             </p>
+              <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
+                Eixos do acompanhamento:
+              </p>
+              <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+                <li>— Estratégia de conteúdo</li>
+                <li>— Tráfego Pago</li>
+                <li>— Acompanhamento Comercial</li>
+              </ul>
              <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
