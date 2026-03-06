@@ -21,25 +21,25 @@ import clientAuramia from "@/assets/client-auramia.png";
 import clientAclari from "@/assets/client-aclari.png";
 
 const clients = [
-  { name: "Dani Fernandes Aromas", img: clientDani },
-  { name: "CIMPLES by Carolina Ferraz", img: clientCimples },
-  { name: "Thais Fernandes", img: clientThais },
-  { name: "Henry Luchetti", img: clientHenry },
-  { name: "Corpo de Ballet", img: clientBallet },
-  { name: "Adriano Martin", img: clientAdriano },
-  { name: "Ana Flávia Roland", img: clientAnaFlavia },
-  { name: "Carol Segura", img: clientCarol },
-  { name: "Cristiano Herrera", img: clientCristiano },
-  { name: "Ouromil Joias", img: clientOuromil },
-  { name: "Joias de Tereza", img: clientJoiasTereza },
-  { name: "Brenda Braga", img: clientBrenda },
-  { name: "Angelo Favero", img: clientAngelo },
-  { name: "La Vie", img: clientLavie },
-  { name: "Fernanda Giacomini", img: clientFernanda },
-  { name: "Giovana Assad", img: clientGiovana },
-  { name: "Auramia", img: clientAuramia },
-  { name: "Aclari", img: clientAclari },
-];
+{ name: "Dani Fernandes Aromas", img: clientDani },
+{ name: "CIMPLES by Carolina Ferraz", img: clientCimples },
+{ name: "Thais Fernandes", img: clientThais },
+{ name: "Henry Luchetti", img: clientHenry },
+{ name: "Corpo de Ballet", img: clientBallet },
+{ name: "Adriano Martin", img: clientAdriano },
+{ name: "Ana Flávia Roland", img: clientAnaFlavia },
+{ name: "Carol Segura", img: clientCarol },
+{ name: "Cristiano Herrera", img: clientCristiano },
+{ name: "Ouromil Joias", img: clientOuromil },
+{ name: "Joias de Tereza", img: clientJoiasTereza },
+{ name: "Brenda Braga", img: clientBrenda },
+{ name: "Angelo Favero", img: clientAngelo },
+{ name: "La Vie", img: clientLavie },
+{ name: "Fernanda Giacomini", img: clientFernanda },
+{ name: "Giovana Assad", img: clientGiovana },
+{ name: "Auramia", img: clientAuramia },
+{ name: "Aclari", img: clientAclari }];
+
 
 const ServicesSection = () => {
   return (
@@ -50,8 +50,8 @@ const ServicesSection = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
+        transition={{ duration: 0.6 }}>
+        
         <div
           className="relative rounded-xl overflow-hidden px-8 py-5"
           style={{
@@ -59,22 +59,22 @@ const ServicesSection = () => {
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
             border: "1px solid hsla(0,0%,0%,0.14)",
-            boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)",
-          }}
-        >
+            boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)"
+          }}>
+          
           {/* Light sweep */}
           <motion.div
             className="absolute top-0 h-full w-[35%] pointer-events-none"
             style={{
-              background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)",
+              background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)"
             }}
             animate={{ x: ["-100%", "400%"] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
-          />
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
+          
           <h2
-            className="text-5xl md:text-6xl text-center text-foreground relative z-10 leading-[0.9]"
-            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 700 }}
-          >
+            className="text-5xl text-center text-foreground relative z-10 leading-[0.9] font-sans md:text-4xl"
+            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 700 }}>
+            
             Marcas que atendemos<br />no decorrer dos anos:
           </h2>
         </div>
@@ -83,18 +83,18 @@ const ServicesSection = () => {
       {/* Client Logo Slider */}
       <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20">
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
-          {[...clients, ...clients].map((client, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 w-64 h-64 mx-4"
-            >
+          {[...clients, ...clients].map((client, i) =>
+          <div
+            key={i}
+            className="flex-shrink-0 w-64 h-64 mx-4">
+            
               <img
-                src={client.img}
-                alt={client.name}
-                className="w-full h-full object-cover rounded-full"
-              />
+              src={client.img}
+              alt={client.name}
+              className="w-full h-full object-cover rounded-full" />
+            
             </div>
-          ))}
+          )}
         </div>
       </div>
 
@@ -102,8 +102,8 @@ const ServicesSection = () => {
         className="text-2xl md:text-3xl font-display text-center mb-4 text-foreground"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
+        viewport={{ once: true }}>
+        
         Sustentar decisões estratégicas ao longo do tempo é o que separa marcas comuns de marcas fortes.
       </motion.h2>
       <motion.p
@@ -111,8 +111,8 @@ const ServicesSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-      >
+        transition={{ delay: 0.2 }}>
+        
         Como agência atuamos em duas principais frentes:
       </motion.p>
 
@@ -123,8 +123,8 @@ const ServicesSection = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
+          
           <h3 className="text-xl font-display text-foreground">
             O Plano Profissional: Operação + Consultoria
           </h3>
@@ -137,8 +137,8 @@ const ServicesSection = () => {
           <img
             src={servicePlano}
             alt="O Plano Profissional"
-            className="w-full rounded-lg mt-4"
-          />
+            className="w-full rounded-lg mt-4" />
+          
         </motion.div>
 
         {/* Service 2 */}
@@ -147,8 +147,8 @@ const ServicesSection = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
+          
           <h3 className="text-xl font-display text-foreground">
             Campanhas: Personalização + Pontualidade
           </h3>
@@ -164,12 +164,12 @@ const ServicesSection = () => {
           <img
             src={serviceCampanhas}
             alt="Campanhas"
-            className="w-full rounded-lg mt-4"
-          />
+            className="w-full rounded-lg mt-4" />
+          
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ServicesSection;
