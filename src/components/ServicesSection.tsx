@@ -84,14 +84,14 @@ const ServicesSection = () => {
 
       {/* Título principal */}
       <motion.p
-        className="text-center text-foreground mb-16 text-xl font-semibold md:text-3xl"
+        className="text-center text-foreground mb-16 text-xl md:text-3xl"
         style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}>
-        
-        Como agência atuamos em duas principais frentes:
+        Como agência atuamos<br />
+        em duas principais frentes:
       </motion.p>
 
       {/* Cards de serviços */}
