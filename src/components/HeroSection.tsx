@@ -31,17 +31,7 @@ const HeroSection = () => {
   }, [displayText, isTyping]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden" style={{ backgroundColor: "hsl(0 0% 0%)" }}>
-      {/* Video background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden opacity-60 pointer-events-none">
-        <iframe
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full scale-[1.5]"
-          src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
-          title="Background video"
-          allow="autoplay; encrypted-media"
-          frameBorder="0"
-        />
-      </div>
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden bg-background">
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center">
@@ -83,15 +73,14 @@ const HeroSection = () => {
           <motion.img
             src={logo}
             alt="Studio 131"
-            className="relative w-40 md:w-56 brightness-200"
+            className="relative w-40 md:w-56"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 0.9, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           />
         </motion.div>
         <motion.h1
-          className="text-3xl md:text-4xl font-display mb-4"
-          style={{ color: "hsla(0,0%,100%,0.85)" }}
+          className="text-3xl md:text-4xl font-display mb-4 text-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -100,8 +89,7 @@ const HeroSection = () => {
           <span className="animate-blink">_</span>
         </motion.h1>
         <motion.p
-          className="text-sm tracking-widest uppercase mb-8"
-          style={{ color: "hsla(0,0%,100%,0.6)" }}
+          className="text-sm tracking-widest uppercase mb-8 text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -109,8 +97,7 @@ const HeroSection = () => {
           Conteúdo, mídia & performance
         </motion.p>
         <motion.p
-          className="max-w-xl text-center leading-relaxed text-sm md:text-base"
-          style={{ color: "hsla(0,0%,100%,0.55)" }}
+          className="max-w-xl text-center leading-relaxed text-sm md:text-base text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
