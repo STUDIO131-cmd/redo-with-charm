@@ -135,7 +135,7 @@ const ServicesSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}>
           
-          <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
+          <img alt="Campanhas" className="w-full object-cover" src="/lovable-uploads/6a3a07e3-beec-4916-86c0-01504c6b501c.png" />
            <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
                Campanhas<br />

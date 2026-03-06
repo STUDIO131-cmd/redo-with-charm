@@ -14,11 +14,11 @@ const CarouselSection = () => {
   return (
     <section className="py-20 overflow-hidden">
       <motion.h2
-        className="text-2xl md:text-3xl font-display text-center mb-4 px-6 text-foreground"
+        className="text-2xl font-display text-center mb-4 px-6 text-foreground md:text-5xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
+        viewport={{ once: true }}>
+        
         Aqui construímos uma Jornada de Ascensão.
       </motion.h2>
       <motion.p
@@ -26,29 +26,29 @@ const CarouselSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-      >
+        transition={{ delay: 0.2 }}>
+        
         Esse é o nosso lema!
       </motion.p>
 
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-scroll-left" style={{ width: "fit-content" }}>
-          {[...images, ...images].map((img, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 w-64 md:w-80 mx-3"
-            >
+          {[...images, ...images].map((img, i) =>
+          <div
+            key={i}
+            className="flex-shrink-0 w-64 md:w-80 mx-3">
+            
               <img
-                src={img}
-                alt={`Projeto ${(i % images.length) + 1}`}
-                className="w-full h-64 md:h-80 object-cover rounded-lg"
-              />
+              src={img}
+              alt={`Projeto ${i % images.length + 1}`}
+              className="w-full h-64 md:h-80 object-cover rounded-lg" />
+            
             </div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default CarouselSection;
