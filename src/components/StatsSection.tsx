@@ -9,11 +9,10 @@ const stats = [
 const StatsSection = () => {
   return (
     <section className="px-6 py-8 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-start">
+      <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-stretch">
         {/* Left: YouTube video */}
         <motion.div
-          className="relative rounded-2xl overflow-hidden bg-primary"
-          style={{ paddingBottom: "75%" }}
+          className="relative rounded-2xl overflow-hidden bg-primary aspect-[4/3]"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -31,20 +30,20 @@ const StatsSection = () => {
 
         {/* Right: Stats content */}
         <motion.div
-          className="rounded-2xl bg-primary p-8 md:p-10 flex flex-col justify-center"
+          className="rounded-2xl bg-primary p-6 md:p-8 flex flex-col justify-center overflow-hidden"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-4xl font-display text-primary-foreground mb-3">
+          <h2 className="text-xl md:text-3xl font-display text-primary-foreground mb-2">
             Aqui construímos<br />uma Jornada de<br />Ascensão:
           </h2>
-          <p className="text-primary-foreground/60 font-body text-base mb-8">
+          <p className="text-primary-foreground/60 font-body text-sm mb-5">
             ► Bebemos da nossa fonte;
           </p>
 
-          <div className="space-y-7">
+          <div className="space-y-4">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -53,7 +52,7 @@ const StatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed font-body">
+                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed font-body">
                   <span className="text-accent mr-1">❖</span>
                   <span className="text-accent font-semibold">
                     {stat.value} {stat.label}
