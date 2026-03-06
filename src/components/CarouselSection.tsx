@@ -12,14 +12,14 @@ const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6
 
 const CarouselSection = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-10 overflow-hidden">
       <motion.h2
-        className="text-2xl font-display text-center mb-4 px-6 text-foreground md:text-5xl"
+        className="text-2xl font-display text-center mb-4 px-6 text-foreground md:text-5xl leading-tight"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}>
         
-        Aqui construímos uma Jornada de Ascensão.
+        Aqui construímos uma<br />Jornada de Ascensão.
       </motion.h2>
       <motion.p
         className="text-center text-muted-foreground mb-12 font-display text-lg px-6"
