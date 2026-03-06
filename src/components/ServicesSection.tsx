@@ -105,7 +105,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}>
           
           <img src={servicePlano} alt="O Plano Profissional" className="w-full object-cover" />
-           <div className="p-6 space-y-4 flex flex-col">
+           <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
                O Plano Profissional<br />
                Operação + Consultoria
@@ -121,7 +121,7 @@ const ServicesSection = () => {
                 <li>— Tráfego Pago</li>
                 <li>— Acompanhamento Comercial</li>
               </ul>
-             <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
@@ -136,7 +136,7 @@ const ServicesSection = () => {
         transition={{ duration: 0.6 }}>
           
           <img src={serviceCampanhas} alt="Campanhas" className="w-full object-cover" />
-           <div className="p-6 space-y-4 flex flex-col">
+           <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
                Campanhas<br />
                Personalização + Pontualidade
@@ -150,7 +150,7 @@ const ServicesSection = () => {
                <li>— Datas comerciais estratégicas</li>
                <li>— Campanhas institucionais ou promocionais</li>
              </ul>
-             <button className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
