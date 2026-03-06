@@ -44,55 +44,40 @@ const clients = [
 const ServicesSection = () => {
   return (
     <section className="px-6 py-20 max-w-5xl mx-auto">
-      {/* Glass Button */}
-      <motion.div
-        className="flex justify-center mb-3"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}>
-        
-        <div
-          className="relative rounded-xl overflow-hidden px-8 py-5"
-          style={{
-            background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
-            border: "1px solid hsla(0,0%,0%,0.14)",
-            boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)"
-          }}>
-          
-          {/* Light sweep */}
-          <motion.div
-            className="absolute top-0 h-full w-[35%] pointer-events-none"
-            style={{
-              background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)"
-            }}
-            animate={{ x: ["-100%", "400%"] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
-          
-          <h2
-            className="text-5xl text-center text-foreground relative z-10 leading-[0.9] font-sans md:text-4xl"
-            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
-            
-            Marcas que atendemos<br />no decorrer dos anos:
-          </h2>
-        </div>
-      </motion.div>
+      {/* Glass Bar Full-Width */}
+      <div
+        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20 py-10"
+        style={{
+          background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+          borderTop: "1px solid hsla(0,0%,0%,0.14)",
+          borderBottom: "1px solid hsla(0,0%,0%,0.14)",
+          boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)"
+        }}>
 
-      {/* Client Logo Slider */}
-      <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20">
+        {/* Light sweep */}
+        <motion.div
+          className="absolute top-0 h-full w-[35%] pointer-events-none"
+          style={{
+            background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)"
+          }}
+          animate={{ x: ["-100%", "400%"] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }} />
+
+        <h2
+          className="text-5xl text-center text-foreground relative z-10 leading-[0.9] font-sans md:text-4xl mb-6 px-6"
+          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
+          Marcas que atendemos<br />no decorrer dos anos:
+        </h2>
+
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
           {[...clients, ...clients].map((client, i) =>
-          <div
-            key={i}
-            className="flex-shrink-0 w-64 h-64 mx-4">
-            
+            <div key={i} className="flex-shrink-0 w-64 h-64 mx-4">
               <img
-              src={client.img}
-              alt={client.name}
-              className="w-full h-full object-cover rounded-full" />
-            
+                src={client.img}
+                alt={client.name}
+                className="w-full h-full object-cover rounded-full" />
             </div>
           )}
         </div>
