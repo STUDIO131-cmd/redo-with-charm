@@ -73,7 +73,7 @@ const ServicesSection = () => {
           
           <h2
             className="text-5xl text-center text-foreground relative z-10 leading-[0.9] font-sans md:text-4xl"
-            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 700 }}>
+            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}>
             
             Marcas que atendemos<br />no decorrer dos anos:
           </h2>
