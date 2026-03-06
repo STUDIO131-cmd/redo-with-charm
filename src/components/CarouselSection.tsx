@@ -45,7 +45,7 @@ const CarouselSection = () => {
                 <img
               src={img}
               alt={`Projeto ${rowIdx * 4 + i + 1}`}
-              className="w-full h-auto object-cover" />
+              className="w-full h-48 md:h-56 object-cover" />
             
               </motion.div>
           )}
