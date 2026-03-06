@@ -1,17 +1,28 @@
 import { motion } from "framer-motion";
-import { Building2, Store, Briefcase, Landmark, ShoppingBag, Gem, Coffee, Shirt } from "lucide-react";
 import servicePlano from "@/assets/service-plano.png";
 import serviceCampanhas from "@/assets/service-campanhas.png";
+import clientDani from "@/assets/client-dani.png";
+import clientCimples from "@/assets/client-cimples.png";
+import clientThais from "@/assets/client-thais.png";
+import clientHenry from "@/assets/client-henry.png";
+import clientBallet from "@/assets/client-ballet.png";
+import clientAdriano from "@/assets/client-adriano.png";
+import clientAnaFlavia from "@/assets/client-anaflavia.png";
+import clientCarol from "@/assets/client-carol.png";
+import clientCristiano from "@/assets/client-cristiano.png";
+import clientOuromil from "@/assets/client-ouromil.png";
 
-const placeholderClients = [
-  { name: "Cliente 1", icon: Building2 },
-  { name: "Cliente 2", icon: Store },
-  { name: "Cliente 3", icon: Briefcase },
-  { name: "Cliente 4", icon: Landmark },
-  { name: "Cliente 5", icon: ShoppingBag },
-  { name: "Cliente 6", icon: Gem },
-  { name: "Cliente 7", icon: Coffee },
-  { name: "Cliente 8", icon: Shirt },
+const clients = [
+  { name: "Dani Fernandes Aromas", img: clientDani },
+  { name: "CIMPLES by Carolina Ferraz", img: clientCimples },
+  { name: "Thais Fernandes", img: clientThais },
+  { name: "Henry Luchetti", img: clientHenry },
+  { name: "Corpo de Ballet", img: clientBallet },
+  { name: "Adriano Martin", img: clientAdriano },
+  { name: "Ana Flávia Roland", img: clientAnaFlavia },
+  { name: "Carol Segura", img: clientCarol },
+  { name: "Cristiano Herrera", img: clientCristiano },
+  { name: "Ouromil Joias", img: clientOuromil },
 ];
 
 const ServicesSection = () => {
@@ -53,12 +64,16 @@ const ServicesSection = () => {
       {/* Client Logo Slider */}
       <div className="relative w-full overflow-hidden mb-20">
         <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
-          {[...placeholderClients, ...placeholderClients].map((client, i) => (
+          {[...clients, ...clients].map((client, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center rounded-lg border border-border bg-card/50"
+              className="flex-shrink-0 w-40 h-40 mx-4"
             >
-              <client.icon className="w-8 h-8 text-muted-foreground" />
+              <img
+                src={client.img}
+                alt={client.name}
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           ))}
         </div>
