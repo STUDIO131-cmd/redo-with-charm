@@ -36,7 +36,7 @@ const CarouselSection = () => {
             {row.map((img, i) =>
           <motion.div
             key={i}
-            className="overflow-hidden rounded-2xl"
+            className="overflow-hidden rounded-2xl aspect-[4/3]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,7 +45,7 @@ const CarouselSection = () => {
                 <img
               src={img}
               alt={`Projeto ${rowIdx * 4 + i + 1}`}
-              className="w-full h-48 md:h-56 object-cover" />
+              className="w-full h-full object-cover" />
             
               </motion.div>
           )}
