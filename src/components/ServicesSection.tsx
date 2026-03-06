@@ -44,7 +44,7 @@ const clients = [
 
 const ServicesSection = () => {
   return (
-    <section className="px-6 py-20 max-w-5xl mx-auto">
+    <section className="px-6 py-20 max-w-5xl mx-auto my-0">
       {/* Glass Bar Full-Width */}
       <div
         className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20 py-10"
@@ -84,7 +84,7 @@ const ServicesSection = () => {
 
       {/* Título principal */}
       <motion.p
-        className="text-center text-foreground mb-16 text-xl md:text-2xl"
+        className="text-center text-foreground mb-16 text-xl font-semibold md:text-3xl"
         style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -146,11 +146,11 @@ const ServicesSection = () => {
              </p>
               <ul className="text-sm font-body space-y-1 mb-4" style={{ color: "hsl(0,0%,50%)" }}>
                 <li className="my-[3px]">— Lançamentos de marca ou produto</li>
-               <li className="my-px">— Rebranding e reposicionamento</li>
-               <li className="my-px">— Datas comerciais estratégicas</li>
-               <li className="my-px">— Campanhas institucionais ou promocionais</li>
+               <li className="my-[3px]">— Rebranding e reposicionamento</li>
+               <li className="my-[3px]">— Datas comerciais estratégicas</li>
+               <li className="my-[4px]">— Campanhas institucionais ou promocionais</li>
              </ul>
-             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity py-[12px] my-[22px]">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
