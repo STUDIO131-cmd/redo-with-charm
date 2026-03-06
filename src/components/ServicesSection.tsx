@@ -46,7 +46,7 @@ const ServicesSection = () => {
     <section className="px-6 py-20 max-w-5xl mx-auto">
       {/* Glass Button */}
       <motion.div
-        className="flex justify-center mb-12"
+        className="flex justify-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -55,11 +55,11 @@ const ServicesSection = () => {
         <div
           className="relative rounded-xl overflow-hidden px-8 py-5"
           style={{
-           background: "linear-gradient(135deg, hsla(0,0%,0%,0.06) 0%, hsla(0,0%,0%,0.03) 100%)",
+            background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
-            border: "1px solid hsla(0,0%,0%,0.10)",
-            boxShadow: "0 8px 32px hsla(0,0%,0%,0.08), inset 0 1px 0 hsla(0,0%,100%,0.3)",
+            border: "1px solid hsla(0,0%,0%,0.14)",
+            boxShadow: "0 8px 32px hsla(0,0%,0%,0.12), inset 0 1px 0 hsla(0,0%,100%,0.2)",
           }}
         >
           {/* Light sweep */}
@@ -71,7 +71,10 @@ const ServicesSection = () => {
             animate={{ x: ["-100%", "400%"] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
           />
-          <h2 className="text-xl md:text-2xl font-display text-center text-foreground relative z-10">
+          <h2
+            className="text-5xl md:text-6xl text-center text-foreground relative z-10 leading-[0.9]"
+            style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 700 }}
+          >
             Marcas que atendemos<br />no decorrer dos anos:
           </h2>
         </div>
