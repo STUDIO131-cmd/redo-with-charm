@@ -52,8 +52,7 @@ const ServicesSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}>
         
-        <div
-          className="relative rounded-xl overflow-hidden px-8 py-5"
+        className="flex justify-center mb-3"
           style={{
             background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
             backdropFilter: "blur(16px)",
