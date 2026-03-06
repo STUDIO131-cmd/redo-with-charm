@@ -1,10 +1,69 @@
 import { motion } from "framer-motion";
+import { Building2, Store, Briefcase, Landmark, ShoppingBag, Gem, Coffee, Shirt } from "lucide-react";
 import servicePlano from "@/assets/service-plano.png";
 import serviceCampanhas from "@/assets/service-campanhas.png";
+
+const placeholderClients = [
+  { name: "Cliente 1", icon: Building2 },
+  { name: "Cliente 2", icon: Store },
+  { name: "Cliente 3", icon: Briefcase },
+  { name: "Cliente 4", icon: Landmark },
+  { name: "Cliente 5", icon: ShoppingBag },
+  { name: "Cliente 6", icon: Gem },
+  { name: "Cliente 7", icon: Coffee },
+  { name: "Cliente 8", icon: Shirt },
+];
 
 const ServicesSection = () => {
   return (
     <section className="px-6 py-20 max-w-5xl mx-auto">
+      {/* Glass Button */}
+      <motion.div
+        className="flex justify-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div
+          className="relative rounded-xl overflow-hidden px-8 py-5"
+          style={{
+            background: "linear-gradient(135deg, hsla(0,0%,100%,0.08) 0%, hsla(0,0%,100%,0.03) 100%)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            border: "1px solid hsla(0,0%,0%,0.08)",
+            boxShadow: "0 8px 32px hsla(0,0%,0%,0.06), inset 0 1px 0 hsla(0,0%,100%,0.6)",
+          }}
+        >
+          {/* Light sweep */}
+          <motion.div
+            className="absolute top-0 h-full w-[35%] pointer-events-none"
+            style={{
+              background: "linear-gradient(90deg, transparent 0%, hsla(36,95%,80%,0.15) 50%, transparent 100%)",
+            }}
+            animate={{ x: ["-100%", "400%"] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+          />
+          <h2 className="text-xl md:text-2xl font-display text-center text-foreground relative z-10">
+            Marcas que atendemos<br />no decorrer dos anos:
+          </h2>
+        </div>
+      </motion.div>
+
+      {/* Client Logo Slider */}
+      <div className="relative w-full overflow-hidden mb-20">
+        <div className="flex animate-scroll-right" style={{ width: "fit-content" }}>
+          {[...placeholderClients, ...placeholderClients].map((client, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-32 h-20 mx-4 flex items-center justify-center rounded-lg border border-border bg-card/50"
+            >
+              <client.icon className="w-8 h-8 text-muted-foreground" />
+            </div>
+          ))}
+        </div>
+      </div>
+
       <motion.h2
         className="text-2xl md:text-3xl font-display text-center mb-4 text-foreground"
         initial={{ opacity: 0 }}
