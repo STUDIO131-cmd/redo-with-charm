@@ -22,9 +22,8 @@ const LocationSection = () => {
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
       >
-        É daqui que estruturamos projetos para clientes
-        <br className="hidden md:block" />em qualquer lugar do mundo, seja presencialmente
-        <br className="hidden md:block" />ou à distância, conforme o contexto de cada negócio.
+        É daqui que estruturamos projetos para clientes em qualquer lugar do mundo,
+        <br className="hidden md:block" />seja presencialmente ou à distância, conforme o contexto de cada negócio.
       </motion.p>
     </section>
   );
