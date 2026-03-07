@@ -17,7 +17,7 @@ const CTASection = () => {
           </motion.div>
 
           <motion.h3
-            className="text-lg text-dark-section-foreground mb-4 leading-relaxed font-sans md:text-2xl"
+            className="text-lg text-dark-section-foreground mb-4 leading-relaxed font-sans md:text-2xl text-justify md:text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -28,18 +28,18 @@ const CTASection = () => {
           </motion.h3>
 
           <motion.p
-            className="text-dark-section-foreground/70 font-body mb-6 text-base"
+            className="text-dark-section-foreground/70 font-body mb-6 text-base text-justify md:text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}>
             
-            Se você tem perguntas e deseja um atendimento personalizado,<br />
+            Se você tem perguntas e deseja um atendimento personalizado,<br className="hidden md:block" />
             nosso canal exclusivo é o WhatsApp
           </motion.p>
 
           <motion.p
-            className="text-gold font-semibold text-sm mb-8 font-body"
+            className="text-gold font-semibold text-sm mb-8 font-body text-justify md:text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
