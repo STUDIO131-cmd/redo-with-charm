@@ -109,8 +109,8 @@ const ServicesSection = () => {
           </div>
            <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-dark-section-foreground font-sans">
-                <span className="text-2xl md:text-3xl font-bold block">O Plano Profissional</span>
-                <span className="text-lg md:text-xl font-extralight block uppercase tracking-wide">Operação + Consultoria</span>
+                <span className="text-2xl md:text-3xl font-bold block text-accent">O Plano Profissional</span>
+                <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Operação + Consultoria</span>
               </h3>
              <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
                Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
@@ -142,8 +142,8 @@ const ServicesSection = () => {
           </div>
            <div className="p-6 space-y-4 flex flex-col flex-1">
              <h3 className="text-dark-section-foreground font-sans">
-                <span className="text-2xl md:text-3xl font-bold block">Campanhas</span>
-                <span className="text-lg md:text-xl font-extralight block uppercase tracking-wide">Personalização + Pontualidade</span>
+                <span className="text-2xl md:text-3xl font-bold block text-accent">Campanhas</span>
+                <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Personalização + Pontualidade</span>
               </h3>
              <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
                Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
