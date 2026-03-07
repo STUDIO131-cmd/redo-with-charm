@@ -60,14 +60,28 @@ const HeroSection = () => {
             }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            {/* Animated light sweep */}
+            {/* Animated light leak */}
             <motion.div
-              className="absolute top-0 h-full w-[35%] pointer-events-none"
+              className="absolute inset-0 pointer-events-none opacity-40"
               style={{
-                background: "linear-gradient(90deg, transparent 0%, hsla(0,0%,100%,0.15) 50%, transparent 100%)",
+                background: "linear-gradient(135deg, hsla(220,80%,50%,0.6) 0%, hsla(280,70%,50%,0.4) 25%, hsla(350,80%,55%,0.5) 45%, hsla(30,90%,55%,0.4) 65%, hsla(180,60%,50%,0.3) 85%, transparent 100%)",
+                filter: "blur(20px)",
               }}
-              animate={{ x: ["-100%", "400%"] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+              animate={{
+                opacity: [0.25, 0.5, 0.3, 0.45, 0.25],
+                scale: [1, 1.15, 1.05, 1.2, 1],
+                rotate: [0, 8, -5, 10, 0],
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute top-0 h-full w-[50%] pointer-events-none"
+              style={{
+                background: "linear-gradient(90deg, transparent 0%, hsla(210,90%,60%,0.2) 20%, hsla(350,80%,55%,0.25) 50%, hsla(30,95%,60%,0.2) 80%, transparent 100%)",
+                filter: "blur(12px)",
+              }}
+              animate={{ x: ["-120%", "350%"] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.5 }}
             />
           </motion.div>
           <motion.img
