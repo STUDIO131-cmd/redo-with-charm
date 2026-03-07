@@ -85,59 +85,14 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Glass banner */}
-          <div className="absolute inset-0 -m-[2px] rounded-xl overflow-hidden" style={{ border: "1px solid hsla(0,0%,100%,0.08)" }}>
-            {/* Grey noise background */}
-            <div className="absolute inset-0 rounded-xl" style={{ background: "#1a1a1a" }} />
-            <svg className="absolute inset-0 w-full h-full rounded-xl" style={{ opacity: 0.15 }}>
-              <filter id="hero-noise">
-                <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" />
-                <feColorMatrix type="saturate" values="0" />
-              </filter>
-              <rect width="100%" height="100%" filter="url(#hero-noise)" />
-            </svg>
-
-            {/* Radial light leaks */}
-            <motion.div
-              className="absolute w-[70%] h-[120%] pointer-events-none"
-              style={{
-                background: "radial-gradient(circle, hsla(220,80%,55%,0.4) 0%, transparent 70%)",
-                filter: "blur(25px)",
-                top: "-10%", left: "-15%",
-              }}
-              animate={{ x: ["0%", "30%", "5%", "25%", "0%"], y: ["0%", "15%", "-10%", "5%", "0%"] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute w-[60%] h-[100%] pointer-events-none"
-              style={{
-                background: "radial-gradient(circle, hsla(320,70%,50%,0.35) 0%, transparent 70%)",
-                filter: "blur(25px)",
-                top: "0%", right: "-10%",
-              }}
-              animate={{ x: ["0%", "-25%", "10%", "-15%", "0%"], y: ["0%", "-12%", "8%", "-5%", "0%"] }}
-              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute w-[65%] h-[110%] pointer-events-none"
-              style={{
-                background: "radial-gradient(circle, hsla(30,90%,55%,0.3) 0%, transparent 70%)",
-                filter: "blur(25px)",
-                bottom: "-15%", left: "20%",
-              }}
-              animate={{ x: ["0%", "20%", "-10%", "15%", "0%"], y: ["0%", "-20%", "5%", "-10%", "0%"] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute w-[50%] h-[90%] pointer-events-none"
-              style={{
-                background: "radial-gradient(circle, hsla(180,60%,50%,0.25) 0%, transparent 70%)",
-                filter: "blur(25px)",
-                top: "5%", right: "5%",
-              }}
-              animate={{ x: ["0%", "-15%", "20%", "-5%", "0%"], y: ["0%", "10%", "-15%", "8%", "0%"] }}
-              transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
+          <div
+            className="absolute inset-0 -m-[2px] rounded-xl overflow-hidden"
+            style={{
+              border: "1px solid hsla(0,0%,100%,0.08)",
+              background: "linear-gradient(135deg, hsla(0,0%,100%,0.06) 0%, hsla(0,0%,100%,0.02) 50%, hsla(0,0%,100%,0.04) 100%)",
+              boxShadow: "inset 0 1px 0 0 hsla(0,0%,100%,0.08), inset 0 -1px 0 0 hsla(0,0%,0%,0.1)",
+            }}
+          />
           <motion.img
             src={logo}
             alt="Studio 131"
