@@ -173,6 +173,8 @@ const HeroSection = () => {
           O Studio 131 é uma agência criativa que apoia, constrói e acompanha decisões de marca e marketing de empresários que já operam mas não querem mais sustentar tudo sozinhos.
         </motion.p>
       </div>
+      {/* Smooth bottom transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background z-20 pointer-events-none" />
     </section>
   );
 };
