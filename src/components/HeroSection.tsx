@@ -35,7 +35,9 @@ const HeroSection = () => {
       {/* Top grey gradient */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-muted/80 to-transparent z-0 pointer-events-none" />
       {/* Film burn light leaks - background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      {/* Mid-grey fade behind light leaks */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-muted/30 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
         <motion.div
           className="absolute w-[80%] h-[150%]"
           style={{
