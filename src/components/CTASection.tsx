@@ -17,7 +17,7 @@ const CTASection = () => {
           </motion.div>
 
           <motion.h3
-            className="text-lg text-dark-section-foreground mb-4 leading-relaxed font-sans md:text-2xl text-justify md:text-center"
+            className="text-lg text-dark-section-foreground mb-4 leading-relaxed font-sans md:text-2xl md:text-center text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -28,24 +28,24 @@ const CTASection = () => {
           </motion.h3>
 
           <motion.p
-            className="text-dark-section-foreground/70 font-body mb-6 text-base text-justify md:text-center"
+            className="text-dark-section-foreground/70 font-body mb-6 text-base md:text-center text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}>
-            
-            Se você tem perguntas e deseja um atendimento personalizado,<br className="hidden md:block" />
+            transition={{ delay: 0.3 }}>Se você tem perguntas e deseja um atendimento personalizado, nosso canal exclusivo é o WhatsApp
+
+            <br className="hidden md:block" />
             nosso canal exclusivo é o WhatsApp
           </motion.p>
 
           <motion.p
-            className="text-gold font-semibold text-sm mb-8 font-body text-justify md:text-center"
+            className="text-gold font-semibold text-sm mb-8 font-body md:text-center text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}>
-            
-            Clique no botão abaixo para iniciar a conversa.
+            transition={{ delay: 0.4 }}>Clique no botão abaixo para
+iniciar a conversa.
+
           </motion.p>
 
           <motion.a
@@ -58,27 +58,27 @@ const CTASection = () => {
             viewport={{ once: true }}
             animate={{
               boxShadow: [
-                "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
-                "0 0 20px 6px hsla(43, 74%, 49%, 0.4)",
-                "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
-              ],
+              "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
+              "0 0 20px 6px hsla(43, 74%, 49%, 0.4)",
+              "0 0 8px 2px hsla(43, 74%, 49%, 0.15)"]
+
             }}
             transition={{
               boxShadow: {
                 duration: 2.5,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut"
               },
               opacity: { delay: 0.5 },
-              y: { delay: 0.5 },
+              y: { delay: 0.5 }
             }}>
             
             FALAR PELO WHATSAPP
           </motion.a>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default CTASection;
