@@ -88,9 +88,10 @@ const HeroSection = () => {
           <div
             className="absolute inset-0 -m-[2px] rounded-xl overflow-hidden"
             style={{
-              border: "1px solid hsla(0,0%,100%,0.08)",
-              background: "linear-gradient(135deg, hsla(0,0%,100%,0.06) 0%, hsla(0,0%,100%,0.02) 50%, hsla(0,0%,100%,0.04) 100%)",
-              boxShadow: "inset 0 1px 0 0 hsla(0,0%,100%,0.08), inset 0 -1px 0 0 hsla(0,0%,0%,0.1)",
+              border: "1px solid hsla(0,0%,100%,0.15)",
+              background: "linear-gradient(135deg, hsla(0,0%,100%,0.14) 0%, hsla(0,0%,100%,0.06) 50%, hsla(0,0%,100%,0.1) 100%)",
+              boxShadow: "inset 0 1px 0 0 hsla(0,0%,100%,0.18), inset 0 -1px 0 0 hsla(0,0%,0%,0.15), 0 4px 20px -4px hsla(0,0%,0%,0.2)",
+              backdropFilter: "blur(12px)",
             }}
           />
           <motion.img
