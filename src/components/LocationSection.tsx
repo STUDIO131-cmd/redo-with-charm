@@ -23,8 +23,8 @@ const LocationSection = () => {
         transition={{ delay: 0.2 }}
       >
         É daqui que estruturamos projetos para clientes
-        <br />em qualquer lugar do mundo, seja presencialmente
-        <br />ou à distância, conforme o contexto de cada negócio.
+        <br className="hidden md:block" />em qualquer lugar do mundo, seja presencialmente
+        <br className="hidden md:block" />ou à distância, conforme o contexto de cada negócio.
       </motion.p>
     </section>
   );
