@@ -101,7 +101,7 @@ const HeroSection = () => {
           <motion.img
             src={logo}
             alt="Studio 131"
-            className="relative w-40 md:w-56 brightness-0"
+            className="relative w-40 md:w-56 brightness-0 opacity-60"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 0.9, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
