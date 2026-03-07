@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const LocationSection = () => {
   return (
-    <section className="px-6 py-16 max-w-3xl mx-auto text-center">
+    <section className="px-6 py-8 max-w-3xl mx-auto text-center">
       <motion.p
         className="text-muted-foreground text-base md:text-lg leading-relaxed font-body"
         initial={{ opacity: 0 }}
@@ -11,7 +11,8 @@ const LocationSection = () => {
       >
         Nossa base fica em <strong className="text-foreground">Catanduva (SP)</strong>,
         <br />onde operamos com estúdio e escritório próprios —
-        <br />ambientes pensados para planejar, gravar, ajustar e acompanhar decisões de marca e marketing.
+        <br />ambientes pensados para planejar, gravar, ajustar
+        <br />e acompanhar decisões de marca e marketing.
       </motion.p>
       <div className="w-16 h-px bg-muted-foreground/30 mx-auto my-6" />
       <motion.p
