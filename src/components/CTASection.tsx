@@ -34,7 +34,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}>
             
-            Se você tem perguntas e deseja um atendimento personalizado,<br />
+            Se você tem perguntas e deseja um atendimento personalizado,<br className="hidden md:block" />
             nosso canal exclusivo é o WhatsApp
           </motion.p>
 

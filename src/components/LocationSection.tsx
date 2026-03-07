@@ -10,9 +10,9 @@ const LocationSection = () => {
         viewport={{ once: true }}
       >
         Nossa base fica em <strong className="text-foreground">Catanduva (SP)</strong>,
-        <br />onde operamos com estúdio e escritório próprios —
-        <br />ambientes pensados para planejar, gravar, ajustar
-        <br />e acompanhar decisões de marca e marketing.
+        <br className="hidden md:block" />onde operamos com estúdio e escritório próprios —
+        <br className="hidden md:block" />ambientes pensados para planejar, gravar, ajustar
+        <br className="hidden md:block" />e acompanhar decisões de marca e marketing.
       </motion.p>
       <div className="w-16 h-px bg-muted-foreground/30 mx-auto my-6" />
       <motion.p
