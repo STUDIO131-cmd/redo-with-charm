@@ -106,10 +106,10 @@ const ServicesSection = () => {
           
           <img alt="O Plano Profissional" className="w-full object-cover" src="/lovable-uploads/c18b8aa1-0fc6-4c13-8626-86f91cd6b135.png" />
            <div className="p-6 space-y-4 flex flex-col flex-1">
-             <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
-               O Plano Profissional<br />
-               Operação + Consultoria
-             </h3>
+             <h3 className="text-dark-section-foreground font-sans">
+                <span className="text-2xl md:text-3xl font-bold block">O Plano Profissional</span>
+                <span className="text-lg md:text-xl font-extralight block uppercase tracking-wide">Operação + Consultoria</span>
+              </h3>
              <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
                Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
              </p>
@@ -137,10 +137,10 @@ const ServicesSection = () => {
           
           <img alt="Campanhas" className="w-full object-cover" src="/lovable-uploads/6a3a07e3-beec-4916-86c0-01504c6b501c.png" />
            <div className="p-6 space-y-4 flex flex-col flex-1">
-             <h3 className="text-2xl md:text-3xl text-dark-section-foreground font-sans font-extralight">
-               Campanhas<br />
-               Personalização + Pontualidade
-             </h3>
+             <h3 className="text-dark-section-foreground font-sans">
+                <span className="text-2xl md:text-3xl font-bold block">Campanhas</span>
+                <span className="text-lg md:text-xl font-extralight block uppercase tracking-wide">Personalização + Pontualidade</span>
+              </h3>
              <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
                Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
              </p>
