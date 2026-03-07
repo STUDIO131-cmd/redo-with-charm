@@ -37,7 +37,7 @@ const HeroSection = () => {
         <motion.div
           className="absolute w-[80%] h-[150%]"
           style={{
-            background: "radial-gradient(circle, hsla(25,95%,55%,0.55) 0%, transparent 60%)",
+            background: "radial-gradient(circle, hsla(25,95%,55%,0.35) 0%, transparent 60%)",
             filter: "blur(60px)",
             top: "-30%", left: "-20%",
           }}
@@ -47,7 +47,7 @@ const HeroSection = () => {
         <motion.div
           className="absolute w-[70%] h-[130%]"
           style={{
-            background: "radial-gradient(circle, hsla(15,90%,50%,0.5) 0%, transparent 60%)",
+            background: "radial-gradient(circle, hsla(15,90%,50%,0.3) 0%, transparent 60%)",
             filter: "blur(60px)",
             top: "-10%", right: "-15%",
           }}
@@ -57,7 +57,7 @@ const HeroSection = () => {
         <motion.div
           className="absolute w-[75%] h-[140%]"
           style={{
-            background: "radial-gradient(circle, hsla(35,100%,50%,0.5) 0%, transparent 60%)",
+            background: "radial-gradient(circle, hsla(35,100%,50%,0.3) 0%, transparent 60%)",
             filter: "blur(60px)",
             bottom: "-40%", left: "10%",
           }}
@@ -67,7 +67,7 @@ const HeroSection = () => {
         <motion.div
           className="absolute w-[65%] h-[120%]"
           style={{
-            background: "radial-gradient(circle, hsla(40,95%,60%,0.45) 0%, transparent 60%)",
+            background: "radial-gradient(circle, hsla(40,95%,60%,0.28) 0%, transparent 60%)",
             filter: "blur(60px)",
             top: "0%", right: "5%",
           }}
