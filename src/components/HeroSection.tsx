@@ -130,10 +130,8 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
         >
-          O Studio 131 é uma agência criativa que apoia,
-          <br className="hidden md:block" />constrói e acompanha decisões de marca e marketing
-          <br className="hidden md:block" />de empresários que já operam mas não querem
-          <br className="hidden md:block" />mais sustentar tudo sozinhos.
+          O Studio 131 é uma agência criativa que assume, com o empresário,
+          <br className="hidden md:block" />a construção e a condução da marca e do marketing.
         </motion.p>
       </div>
       {/* Smooth bottom transition */}
