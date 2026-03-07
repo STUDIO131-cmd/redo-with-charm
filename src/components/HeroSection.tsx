@@ -101,7 +101,7 @@ const HeroSection = () => {
           <motion.img
             src={logo}
             alt="Studio 131"
-            className="relative w-40 md:w-56"
+            className="relative w-40 md:w-56 brightness-0"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 0.9, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -117,7 +117,7 @@ const HeroSection = () => {
           <span className="animate-blink">_</span>
         </motion.h1>
         <motion.p
-          className="text-sm tracking-widest uppercase mb-8 text-muted-foreground"
+          className="text-sm tracking-widest uppercase mb-8 text-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -125,7 +125,7 @@ const HeroSection = () => {
           Conteúdo, mídia & performance
         </motion.p>
         <motion.p
-          className="max-w-xl text-center leading-relaxed text-sm md:text-base text-muted-foreground"
+          className="max-w-xl text-center leading-relaxed text-sm md:text-base text-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
