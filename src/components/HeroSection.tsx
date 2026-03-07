@@ -32,6 +32,49 @@ const HeroSection = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden bg-background">
+      {/* Film burn light leaks - background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <motion.div
+          className="absolute w-[80%] h-[150%]"
+          style={{
+            background: "radial-gradient(circle, hsla(220,80%,70%,0.3) 0%, transparent 60%)",
+            filter: "blur(60px)",
+            top: "-30%", left: "-20%",
+          }}
+          animate={{ x: ["0%", "50%", "-10%", "40%", "0%"], y: ["0%", "20%", "-15%", "10%", "0%"], scale: [1, 1.3, 0.9, 1.2, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[70%] h-[130%]"
+          style={{
+            background: "radial-gradient(circle, hsla(320,70%,65%,0.25) 0%, transparent 60%)",
+            filter: "blur(60px)",
+            top: "-10%", right: "-15%",
+          }}
+          animate={{ x: ["0%", "-40%", "15%", "-30%", "0%"], y: ["0%", "-20%", "10%", "-5%", "0%"], scale: [1, 1.2, 1.1, 0.9, 1] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[75%] h-[140%]"
+          style={{
+            background: "radial-gradient(circle, hsla(35,90%,65%,0.25) 0%, transparent 60%)",
+            filter: "blur(60px)",
+            bottom: "-40%", left: "10%",
+          }}
+          animate={{ x: ["0%", "35%", "-20%", "25%", "0%"], y: ["0%", "-30%", "10%", "-20%", "0%"], scale: [1, 0.9, 1.3, 1.1, 1] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[65%] h-[120%]"
+          style={{
+            background: "radial-gradient(circle, hsla(180,60%,60%,0.2) 0%, transparent 60%)",
+            filter: "blur(60px)",
+            top: "0%", right: "5%",
+          }}
+          animate={{ x: ["0%", "-25%", "30%", "-10%", "0%"], y: ["0%", "15%", "-25%", "10%", "0%"], scale: [1.1, 0.9, 1.2, 1, 1.1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center">
