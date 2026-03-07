@@ -36,7 +36,7 @@ const CarouselSection = () => {
             {row.map((img, i) =>
           <motion.div
             key={i}
-            className="overflow-hidden rounded-2xl aspect-[4/3]"
+            className="overflow-hidden rounded-2xl aspect-[3/4]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
