@@ -8,7 +8,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="px-6 py-8 max-w-6xl mx-auto">
+    <section className="px-6 py-12 max-w-6xl mx-auto">
       <div className="grid md:grid-cols-[3fr_2fr] gap-6 items-stretch">
         {/* Left: YouTube video */}
         <motion.div

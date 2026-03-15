@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, [displayText, isTyping]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-20 overflow-hidden bg-background">
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-16 overflow-hidden bg-background">
       {/* Top grey gradient */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-muted/80 to-transparent z-0 pointer-events-none" />
       {/* Film burn light leaks - background */}

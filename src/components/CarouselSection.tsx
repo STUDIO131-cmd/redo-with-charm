@@ -13,7 +13,7 @@ const row2 = [carousel5, carousel6, carousel7, carousel8];
 
 const CarouselSection = () => {
   return (
-    <section className="py-10 px-4 md:px-8">
+    <section className="py-12 px-4 md:px-8">
       <motion.h2
         className="text-2xl font-display text-center mb-4 px-6 text-foreground md:text-5xl leading-tight"
         initial={{ opacity: 0 }}

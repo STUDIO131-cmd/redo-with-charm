@@ -17,7 +17,7 @@ const team = [
 
 const TeamSection = () => {
   return (
-    <section className="bg-secondary px-6 py-20">
+    <section className="bg-secondary px-6 py-12">
       <div className="max-w-5xl mx-auto">
         <motion.p
           className="text-muted-foreground text-xs tracking-widest uppercase mb-2 text-center font-body"

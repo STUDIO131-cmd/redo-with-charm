@@ -52,7 +52,7 @@ iniciar a conversa.
             href="https://wa.me/5517992595117?text=Ol%C3%A1,%20STUDIO%20131%20-%20vim%20do%20site%20e%20quero%20um%20atendimento%20pr%C3%B3ximo."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gold text-accent-foreground px-8 py-3 rounded-full text-sm font-semibold font-body tracking-wide hover:opacity-90 transition-opacity"
+            className="btn-liquid-glass btn-liquid-gold inline-block px-8 py-3 text-sm font-semibold tracking-wide"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
