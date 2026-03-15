@@ -84,7 +84,7 @@ const ServicesSection = () => {
 
       {/* Título principal */}
       <motion.p
-        className="text-center text-foreground mb-16 text-xl md:text-3xl font-light my-[44px]"
+        className="text-center text-foreground mb-10 text-xl md:text-3xl font-light mt-0"
         style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
