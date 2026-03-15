@@ -32,10 +32,8 @@ const CTASection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}>Se você tem perguntas e deseja um atendimento personalizado, nosso canal exclusivo é o WhatsApp
-
-            <br className="hidden md:block" />
-            nosso canal exclusivo é o WhatsApp
+            transition={{ delay: 0.3 }}>
+            Se você tem perguntas e deseja um atendimento personalizado, nosso canal exclusivo é o WhatsApp.
           </motion.p>
 
           <motion.p
@@ -43,9 +41,8 @@ const CTASection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}>Clique no botão abaixo para
-iniciar a conversa.
-
+            transition={{ delay: 0.4 }}>
+            Clique no botão abaixo para iniciar a conversa.
           </motion.p>
 
           <motion.a
@@ -58,27 +55,26 @@ iniciar a conversa.
             viewport={{ once: true }}
             animate={{
               boxShadow: [
-              "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
-              "0 0 20px 6px hsla(43, 74%, 49%, 0.4)",
-              "0 0 8px 2px hsla(43, 74%, 49%, 0.15)"]
-
+                "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
+                "0 0 20px 6px hsla(43, 74%, 49%, 0.4)",
+                "0 0 8px 2px hsla(43, 74%, 49%, 0.15)",
+              ],
             }}
             transition={{
               boxShadow: {
                 duration: 2.5,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               },
               opacity: { delay: 0.5 },
-              y: { delay: 0.5 }
+              y: { delay: 0.5 },
             }}>
-            
             FALAR PELO WHATSAPP
           </motion.a>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default CTASection;

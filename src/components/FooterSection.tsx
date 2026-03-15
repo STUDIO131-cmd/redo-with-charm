@@ -5,63 +5,49 @@ const FooterSection = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const buttons = [
+    { label: "Campanhas", href: "#campanhas" },
+    { label: "O Plano Profissional", href: "#plano" },
+    { label: "The Journey", href: "#journey" },
+    { label: "Voltar ao topo", onClick: scrollToTop },
+  ];
+
   return (
-    <footer className="bg-dark-section px-6 py-12">
-      <div className="max-w-5xl mx-auto">
+    <footer className="bg-black py-8 md:py-12">
+      <div className="flex flex-col items-center gap-6">
         {/* Logo */}
-        <div className="flex justify-center mb-8">
-          <img src={logo} alt="Studio 131" className="w-24 opacity-50" />
-        </div>
+        <img
+          src={logo}
+          alt="Studio 131"
+          className="h-16 md:h-20 w-auto opacity-50"
+        />
 
-        {/* Navigation */}
-        <nav className="flex flex-wrap justify-center gap-3 mb-8">
-          <a
-            href="#campanhas"
-            className="btn-liquid-glass btn-liquid-gold text-xs px-5 py-2"
-          >
-            Campanhas
-          </a>
-          <a
-            href="#plano"
-            className="btn-liquid-glass btn-liquid-gold text-xs px-5 py-2"
-          >
-            O Plano Profissional
-          </a>
-          <a
-            href="#journey"
-            className="btn-liquid-glass btn-liquid-gold text-xs px-5 py-2"
-          >
-            The Journey
-          </a>
-          <button
-            onClick={scrollToTop}
-            className="btn-liquid-glass text-xs px-5 py-2"
-          >
-            ↑ Voltar ao topo
-          </button>
-        </nav>
-
-        {/* WhatsApp */}
-        <div className="flex justify-center mb-8">
-          <a
-            href="https://wa.me/5517992595117?text=Ol%C3%A1,%20STUDIO%20131%20-%20vim%20do%20site%20e%20quero%20um%20atendimento%20pr%C3%B3ximo."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-liquid-glass btn-liquid-gold flex items-center gap-2 text-sm px-6 py-3"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 448 512" fill="currentColor">
-              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-            </svg>
-            WhatsApp
-          </a>
+        {/* Button grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-[92vw] sm:w-auto sm:max-w-lg mx-auto">
+          {buttons.map((btn) =>
+            btn.onClick ? (
+              <button
+                key={btn.label}
+                onClick={btn.onClick}
+                className="min-h-[56px] px-5 py-3 rounded-lg backdrop-blur-xl border border-[hsla(36,95%,80%,0.25)] bg-[hsla(36,95%,80%,0.08)] text-[hsl(36,95%,80%)] text-xs sm:text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:bg-[hsla(36,95%,80%,0.18)] transition-all text-center leading-[1.3] whitespace-normal"
+              >
+                {btn.label}
+              </button>
+            ) : (
+              <a
+                key={btn.label}
+                href={btn.href}
+                className="min-h-[56px] px-5 py-3 rounded-lg backdrop-blur-xl border border-[hsla(36,95%,80%,0.25)] bg-[hsla(36,95%,80%,0.08)] text-[hsl(36,95%,80%)] text-xs sm:text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:bg-[hsla(36,95%,80%,0.18)] transition-all text-center leading-[1.3] whitespace-normal flex items-center justify-center"
+              >
+                {btn.label}
+              </a>
+            )
+          )}
         </div>
 
         {/* Copyright */}
-        <p className="text-muted-foreground text-xs text-center">
-          Copyright © 2026 Todos os direitos reservados.
-        </p>
-        <p className="text-muted-foreground text-xs text-center mt-2">
-          Oferecido com muita estratégia por: <span className="font-semibold">STUDIO 131</span>
+        <p className="text-xs text-white/40 text-center">
+          Studio 131 © Copyright 2026 — Todos os direitos reservados
         </p>
       </div>
     </footer>

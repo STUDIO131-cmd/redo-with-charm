@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "5x", label: "crescimento em 4 anos:", desc: "multiplicamos por 5 vezes nosso faturamento." },
-  { value: "6", label: "dígitos de faturamento anual:", desc: "consistência em resultados expressivos." },
-  { value: "", label: "Instagram como canal principal:", desc: "O pilar da nossa estratégia de marketing com baixo investimento em mídia paga." },
+  { value: "", label: "Instagram como canal principal:", desc: "O pilar da nossa estratégia de marketing com baixo investimento em mídia paga. Forte movimento orgânico e estratégia comercial interna." },
 ];
 
 const YOUTUBE_URL = "https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3";
