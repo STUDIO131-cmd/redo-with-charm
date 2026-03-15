@@ -47,7 +47,7 @@ const ServicesSection = () => {
     <section className="px-6 py-12 max-w-5xl mx-auto my-0">
       {/* Glass Bar Full-Width */}
       <div
-        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20 py-10"
+        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-12 py-8"
         style={{
           background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
           backdropFilter: "blur(16px)",
