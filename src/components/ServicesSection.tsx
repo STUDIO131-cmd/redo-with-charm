@@ -44,7 +44,7 @@ const clients = [
 
 const ServicesSection = () => {
   return (
-    <section className="px-6 py-20 max-w-5xl mx-auto my-0">
+    <section className="px-6 py-12 max-w-5xl mx-auto my-0">
       {/* Glass Bar Full-Width */}
       <div
         className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20 py-10"
