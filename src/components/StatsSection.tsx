@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "5x", label: "crescimento em 4 anos:", desc: "multiplicamos por 5 vezes nosso faturamento." },
   { value: "6", label: "dígitos de faturamento anual:", desc: "consistência em resultados expressivos." },
-  { value: "►", label: "Instagram como canal principal:", desc: "O pilar da nossa estratégia de marketing com baixo investimento em mídia paga." },
+  { value: "", label: "Instagram como canal principal:", desc: "O pilar da nossa estratégia de marketing com baixo investimento em mídia paga." },
 ];
 
 const StatsSection = () => {
