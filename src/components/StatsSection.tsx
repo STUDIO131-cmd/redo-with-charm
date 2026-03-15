@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const stats = [
@@ -5,6 +6,29 @@ const stats = [
   { value: "6", label: "dígitos de faturamento anual:", desc: "consistência em resultados expressivos." },
   { value: "", label: "Instagram como canal principal:", desc: "O pilar da nossa estratégia de marketing com baixo investimento em mídia paga." },
 ];
+
+const YOUTUBE_URL = "https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3";
+
+const YouTubeEmbed = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const iframe = document.createElement("iframe");
+    iframe.src = YOUTUBE_URL;
+    iframe.title = "Studio 131 video";
+    iframe.allow = "autoplay; encrypted-media";
+    iframe.frameBorder = "0";
+    iframe.style.cssText = "position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform:scale(1.35);border:0;";
+    container.appendChild(iframe);
+    return () => {
+      while (container.firstChild) container.removeChild(container.firstChild);
+    };
+  }, []);
+
+  return <div ref={containerRef} className="relative w-full h-full rounded-xl overflow-hidden" />;
+};
 
 const StatsSection = () => {
   return (
@@ -18,16 +42,7 @@ const StatsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="relative w-full h-full rounded-xl overflow-hidden">
-            <iframe
-              className="absolute inset-0 w-full h-full pointer-events-none scale-[1.35]"
-              src="https://www.youtube.com/embed/neFhIUipjLU?autoplay=1&mute=1&loop=1&playlist=neFhIUipjLU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
-              title="Studio 131 video"
-              allow="autoplay; encrypted-media"
-              frameBorder="0"
-              style={{ border: 0 }}
-            />
-          </div>
+          <YouTubeEmbed />
         </motion.div>
 
         {/* Right: Stats content */}
