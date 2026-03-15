@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
-    <section className="px-6 md:px-12 lg:px-20 py-10">
+    <section className="px-6 md:px-12 lg:px-20 py-12">
       <div className="bg-dark-section rounded-3xl px-6 py-20 max-w-5xl mx-auto">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
