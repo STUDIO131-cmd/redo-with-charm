@@ -123,7 +123,7 @@ const ServicesSection = () => {
                 <li>— Tráfego Pago</li>
                 <li>— Acompanhamento Comercial</li>
               </ul>
-             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+             <button className="btn-liquid-glass btn-liquid-gold mt-auto w-full flex items-center justify-center gap-2 text-sm">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
