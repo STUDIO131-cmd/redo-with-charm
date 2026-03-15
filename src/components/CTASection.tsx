@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
-    <section className="px-6 md:px-12 lg:px-20 py-10">
-      <div className="bg-dark-section rounded-3xl px-6 py-20 max-w-5xl mx-auto">
+    <section className="px-6 md:px-12 lg:px-20 py-12">
+      <div className="bg-dark-section rounded-3xl px-6 py-16 max-w-5xl mx-auto">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             className="mb-8"
@@ -52,7 +52,7 @@ iniciar a conversa.
             href="https://wa.me/5517992595117?text=Ol%C3%A1,%20STUDIO%20131%20-%20vim%20do%20site%20e%20quero%20um%20atendimento%20pr%C3%B3ximo."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gold text-accent-foreground px-8 py-3 rounded-full text-sm font-semibold font-body tracking-wide hover:opacity-90 transition-opacity"
+            className="btn-liquid-glass btn-liquid-gold inline-block px-8 py-3 text-sm font-semibold tracking-wide"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

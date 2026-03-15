@@ -44,10 +44,10 @@ const clients = [
 
 const ServicesSection = () => {
   return (
-    <section className="px-6 py-20 max-w-5xl mx-auto my-0">
+    <section className="px-6 py-12 max-w-5xl mx-auto my-0">
       {/* Glass Bar Full-Width */}
       <div
-        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-20 py-10"
+        className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mb-12 py-8"
         style={{
           background: "linear-gradient(135deg, hsla(0,0%,0%,0.10) 0%, hsla(0,0%,0%,0.06) 100%)",
           backdropFilter: "blur(16px)",
@@ -84,7 +84,7 @@ const ServicesSection = () => {
 
       {/* Título principal */}
       <motion.p
-        className="text-center text-foreground mb-16 text-xl md:text-3xl font-light my-[44px]"
+        className="text-center text-foreground mb-10 text-xl md:text-3xl font-light mt-0"
         style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -123,7 +123,7 @@ const ServicesSection = () => {
                 <li>— Tráfego Pago</li>
                 <li>— Acompanhamento Comercial</li>
               </ul>
-             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground py-3 px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity">
+             <button className="btn-liquid-glass btn-liquid-gold mt-auto w-full flex items-center justify-center gap-2 text-sm">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
@@ -154,7 +154,7 @@ const ServicesSection = () => {
                <li className="my-[3px]">— Datas comerciais estratégicas</li>
                <li className="my-[4px]">— Campanhas institucionais ou promocionais</li>
              </ul>
-             <button className="mt-auto w-full flex items-center justify-center gap-2 rounded-xl bg-accent text-accent-foreground px-4 font-body text-sm font-medium hover:opacity-90 transition-opacity py-[12px] my-[22px]">
+             <button className="btn-liquid-glass btn-liquid-gold mt-auto w-full flex items-center justify-center gap-2 text-sm">
               <LayoutGrid className="w-4 h-4" />
               Clique: MAIS INFORMAÇÕES
             </button>
