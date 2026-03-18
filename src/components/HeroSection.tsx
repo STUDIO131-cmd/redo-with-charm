@@ -58,6 +58,7 @@ const HeroSection = () => {
             src={logo}
             alt="Studio 131"
             className="relative w-40 md:w-56 brightness-0 opacity-90"
+            loading="eager"
             fetchPriority="high"
           />
         </motion.div>
