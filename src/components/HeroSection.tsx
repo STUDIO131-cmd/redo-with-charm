@@ -35,45 +35,6 @@ const HeroSection = () => {
       {/* Mid-grey fade */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-muted/30 to-transparent z-0 pointer-events-none" />
       
-      {/* Film burn light leaks - CSS animations instead of framer-motion */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-        <div
-          className="absolute w-[80%] h-[150%] animate-float-1"
-          style={{
-            background: "radial-gradient(circle, hsla(25,95%,55%,0.35) 0%, transparent 60%)",
-            filter: "blur(60px)",
-            top: "-30%",
-            left: "-20%",
-          }}
-        />
-        <div
-          className="absolute w-[70%] h-[130%] animate-float-2"
-          style={{
-            background: "radial-gradient(circle, hsla(185,90%,55%,0.35) 0%, transparent 60%)",
-            filter: "blur(60px)",
-            top: "-10%",
-            right: "-15%",
-          }}
-        />
-        <div
-          className="absolute w-[75%] h-[140%] animate-float-3"
-          style={{
-            background: "radial-gradient(circle, hsla(35,100%,50%,0.3) 0%, transparent 60%)",
-            filter: "blur(60px)",
-            bottom: "-40%",
-            left: "10%",
-          }}
-        />
-        <div
-          className="absolute w-[65%] h-[120%] animate-float-4"
-          style={{
-            background: "radial-gradient(circle, hsla(220,85%,72%,0.35) 0%, transparent 60%)",
-            filter: "blur(60px)",
-            top: "0%",
-            right: "5%",
-          }}
-        />
-      </div>
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center">
