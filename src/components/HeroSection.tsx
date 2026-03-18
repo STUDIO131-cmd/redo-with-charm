@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import logo from "@/assets/logo-studio131.png";
 import { motion } from "framer-motion";
 
-
-
 const FULL_TEXT = ".We are the team/";
 
 const HeroSection = () => {
@@ -34,49 +32,46 @@ const HeroSection = () => {
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] px-6 py-16 overflow-hidden bg-background">
       {/* Top grey gradient */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-muted/80 to-transparent z-0 pointer-events-none" />
-      {/* Film burn light leaks - background */}
-      {/* Mid-grey fade behind light leaks */}
+      {/* Mid-grey fade */}
       <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-muted/30 to-transparent z-0 pointer-events-none" />
+      
+      {/* Film burn light leaks - CSS animations instead of framer-motion */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-        <motion.div
-          className="absolute w-[80%] h-[150%]"
+        <div
+          className="absolute w-[80%] h-[150%] animate-float-1"
           style={{
             background: "radial-gradient(circle, hsla(25,95%,55%,0.35) 0%, transparent 60%)",
             filter: "blur(60px)",
-            top: "-30%", left: "-20%",
+            top: "-30%",
+            left: "-20%",
           }}
-          animate={{ x: ["0%", "50%", "-10%", "40%", "0%"], y: ["0%", "20%", "-15%", "10%", "0%"], scale: [1, 1.3, 0.9, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute w-[70%] h-[130%]"
+        <div
+          className="absolute w-[70%] h-[130%] animate-float-2"
           style={{
             background: "radial-gradient(circle, hsla(185,90%,55%,0.35) 0%, transparent 60%)",
             filter: "blur(60px)",
-            top: "-10%", right: "-15%",
+            top: "-10%",
+            right: "-15%",
           }}
-          animate={{ x: ["0%", "-40%", "15%", "-30%", "0%"], y: ["0%", "-20%", "10%", "-5%", "0%"], scale: [1, 1.2, 1.1, 0.9, 1] }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute w-[75%] h-[140%]"
+        <div
+          className="absolute w-[75%] h-[140%] animate-float-3"
           style={{
             background: "radial-gradient(circle, hsla(35,100%,50%,0.3) 0%, transparent 60%)",
             filter: "blur(60px)",
-            bottom: "-40%", left: "10%",
+            bottom: "-40%",
+            left: "10%",
           }}
-          animate={{ x: ["0%", "35%", "-20%", "25%", "0%"], y: ["0%", "-30%", "10%", "-20%", "0%"], scale: [1, 0.9, 1.3, 1.1, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div
-          className="absolute w-[65%] h-[120%]"
+        <div
+          className="absolute w-[65%] h-[120%] animate-float-4"
           style={{
             background: "radial-gradient(circle, hsla(220,85%,72%,0.35) 0%, transparent 60%)",
             filter: "blur(60px)",
-            top: "0%", right: "5%",
+            top: "0%",
+            right: "5%",
           }}
-          animate={{ x: ["0%", "-25%", "30%", "-10%", "0%"], y: ["0%", "15%", "-25%", "10%", "0%"], scale: [1.1, 0.9, 1.2, 1, 1.1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
@@ -98,13 +93,11 @@ const HeroSection = () => {
               backdropFilter: "blur(12px)",
             }}
           />
-          <motion.img
+          <img
             src={logo}
             alt="Studio 131"
-            className="relative w-40 md:w-56 brightness-0 opacity-40"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 0.9, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative w-40 md:w-56 brightness-0 opacity-90"
+            fetchPriority="high"
           />
         </motion.div>
         <motion.h1

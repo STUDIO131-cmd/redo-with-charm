@@ -51,6 +51,8 @@ const TeamSection = () => {
                 src={member.img}
                 alt={member.name}
                 className="w-full aspect-[4/5] object-cover rounded-lg mb-4"
+                loading="lazy"
+                decoding="async"
               />
               <h3 className="font-display text-base md:text-lg text-foreground">{member.name}</h3>
               <p className="text-muted-foreground text-xs font-body">{member.role}</p>
