@@ -144,7 +144,7 @@ const ServicesSection = () => {
             <p className="text-sm tracking-wide" style={{ color: "hsl(0,0%,32%)" }}>
               Eixos do acompanhamento:
             </p>
-            <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+            <ul className="text-sm space-y-1" style={{ color: "hsl(0,0%,32%)" }}>
               <li>— Estratégia de conteúdo</li>
               <li>— Tráfego Pago</li>
               <li>— Acompanhamento Comercial</li>
