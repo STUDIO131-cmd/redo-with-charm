@@ -6,9 +6,9 @@ const FooterSection = () => {
   };
 
   const buttons = [
-    { label: "Campanhas", href: "#campanhas" },
-    { label: "O Plano Profissional", href: "#plano" },
-    { label: "The Journey", href: "#journey" },
+    { label: "Campanhas", href: "https://campanhas.studio131.com.br", external: true },
+    { label: "O Plano Profissional", href: "https://planoprofissional.studio131.com.br", external: true },
+    { label: "The Journey", href: "https://ajornadaimersao.studio131.com.br", external: true },
     { label: "Voltar ao topo", onClick: scrollToTop },
   ];
 
