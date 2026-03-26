@@ -15,7 +15,8 @@ const CarouselSection = () => {
   return (
     <section id="journey" className="py-12 px-4 md:px-8">
       <motion.h2
-        className="text-2xl font-display text-center mb-4 px-6 text-foreground md:text-5xl leading-tight"
+        className="text-2xl text-center mb-4 px-6 text-foreground md:text-5xl leading-tight font-light"
+        style={{ fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
