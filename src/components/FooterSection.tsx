@@ -6,9 +6,9 @@ const FooterSection = () => {
   };
 
   const buttons = [
-    { label: "Campanhas", href: "#campanhas" },
-    { label: "O Plano Profissional", href: "#plano" },
-    { label: "The Journey", href: "#journey" },
+    { label: "Campanhas", href: "https://campanhas.studio131.com.br", external: true },
+    { label: "O Plano Profissional", href: "https://planoprofissional.studio131.com.br", external: true },
+    { label: "The Journey", href: "https://ajornadaimersao.studio131.com.br", external: true },
     { label: "Voltar ao topo", onClick: scrollToTop },
   ];
 
@@ -37,6 +37,8 @@ const FooterSection = () => {
               <a
                 key={btn.label}
                 href={btn.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="min-h-[56px] px-5 py-3 rounded-lg backdrop-blur-xl border border-[hsla(36,95%,80%,0.25)] bg-[hsla(36,95%,80%,0.08)] text-[hsl(36,95%,80%)] text-xs sm:text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:bg-[hsla(36,95%,80%,0.18)] transition-all text-center leading-[1.3] whitespace-normal flex items-center justify-center"
               >
                 {btn.label}
