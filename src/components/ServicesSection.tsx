@@ -141,7 +141,7 @@ const ServicesSection = () => {
             <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
-            <p className="text-sm tracking-wide" style={{ color: "hsl(0,0%,32%)" }}>
+            <p className="text-sm tracking-wide text-white/70">
               Eixos do acompanhamento:
             </p>
             <ul className="text-sm space-y-1" style={{ color: "hsl(0,0%,32%)" }}>
