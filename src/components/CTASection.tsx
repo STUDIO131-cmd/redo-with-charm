@@ -28,7 +28,7 @@ const CTASection = () => {
           </motion.h3>
 
           <motion.p
-            className="text-dark-section-foreground/70 font-body mb-6 text-base md:text-center text-center"
+            className="text-dark-section-foreground/70 mb-6 text-base md:text-center text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
