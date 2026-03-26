@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['DM Sans', 'sans-serif'],
+        sans: ["'TikTok Sans'", "sans-serif"],
+        display: ["'TikTok Sans'", "'NT Epika'", "sans-serif"],
+        body: ["'TikTok Sans'", "'Moneta'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -54,6 +55,19 @@ export default {
         gold: "hsl(var(--gold))",
         "dark-section": "hsl(var(--dark-section))",
         "dark-section-foreground": "hsl(var(--dark-section-foreground))",
+        /* Studio 131 extended palette */
+        studio: {
+          coral: "hsl(var(--studio-coral))",
+          wine: "hsl(var(--studio-wine))",
+          burgundy: "hsl(var(--studio-burgundy))",
+          "blue-deep": "hsl(var(--studio-blue-deep))",
+          "blue-ocean": "hsl(var(--studio-blue-ocean))",
+          green: "hsl(var(--studio-green))",
+          creme: "hsl(var(--studio-creme))",
+          "gray-light": "hsl(var(--studio-gray-light))",
+          "gray-mid": "hsl(var(--studio-gray-mid))",
+          "gray-dark": "hsl(var(--studio-gray-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -72,20 +86,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
