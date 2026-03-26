@@ -28,7 +28,8 @@ const TeamSection = () => {
           Meet our team
         </motion.p>
         <motion.h2
-          className="text-2xl md:text-3xl font-display text-center mb-12 text-foreground"
+          className="text-2xl md:text-3xl text-center mb-12 text-foreground font-light"
+          style={{ fontStretch: "expanded" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
