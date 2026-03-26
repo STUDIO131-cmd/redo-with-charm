@@ -55,7 +55,7 @@ const StatsSection = () => {
           <h2 className="text-xl md:text-3xl text-primary-foreground mb-2 font-light" style={{ fontStretch: "expanded" }}>
             Aqui construímos<br />uma Jornada de<br />Ascensão:
           </h2>
-          <p className="text-primary-foreground/60 font-body text-sm mb-5">
+          <p className="text-primary-foreground/60 text-sm mb-5">
             ► Bebemos da nossa fonte;
           </p>
 
