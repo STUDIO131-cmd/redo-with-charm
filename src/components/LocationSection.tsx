@@ -4,7 +4,7 @@ const LocationSection = () => {
   return (
     <section className="px-6 py-8 max-w-3xl mx-auto text-center">
       <motion.p
-        className="text-muted-foreground text-base md:text-lg leading-relaxed font-body"
+        className="text-muted-foreground text-base md:text-lg leading-relaxed"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
