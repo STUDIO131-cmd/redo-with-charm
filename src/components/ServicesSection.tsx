@@ -141,10 +141,10 @@ const ServicesSection = () => {
             <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
-            <p className="text-sm tracking-wide" style={{ color: "hsl(0,0%,32%)" }}>
+            <p className="text-sm tracking-wide text-white/70">
               Eixos do acompanhamento:
             </p>
-            <ul className="text-sm space-y-1" style={{ color: "hsl(0,0%,32%)" }}>
+            <ul className="text-sm space-y-1 text-white/70">
               <li>— Estratégia de conteúdo</li>
               <li>— Tráfego Pago</li>
               <li>— Acompanhamento Comercial</li>
@@ -181,7 +181,7 @@ const ServicesSection = () => {
             <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
             </p>
-            <ul className="text-sm space-y-1 mb-4" style={{ color: "hsl(0,0%,32%)" }}>
+            <ul className="text-sm space-y-1 mb-4 text-white/70">
               <li className="my-[3px]">— Lançamentos de marca ou produto</li>
               <li className="my-[3px]">— Rebranding e reposicionamento</li>
               <li className="my-[3px]">— Datas comerciais estratégicas</li>
