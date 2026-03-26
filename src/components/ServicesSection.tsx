@@ -138,7 +138,7 @@ const ServicesSection = () => {
               <span className="text-2xl md:text-3xl font-bold block text-accent">O Plano Profissional</span>
               <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Operação + Consultoria</span>
             </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
             <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
