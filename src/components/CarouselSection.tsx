@@ -24,7 +24,7 @@ const CarouselSection = () => {
         Aqui construímos uma<br />Jornada de Ascensão.
       </motion.h2>
       <motion.p
-        className="text-center text-muted-foreground mb-12 font-display text-lg px-6"
+        className="text-center text-muted-foreground mb-12 text-lg px-6 font-light"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

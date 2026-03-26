@@ -37,7 +37,7 @@ const CTASection = () => {
           </motion.p>
 
           <motion.p
-            className="text-gold font-semibold text-sm mb-8 font-body md:text-center text-center"
+            className="text-gold font-semibold text-sm mb-8 md:text-center text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

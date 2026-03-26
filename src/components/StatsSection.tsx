@@ -68,7 +68,7 @@ const StatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed font-body">
+                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed">
                   <span className="text-accent mr-1">❖</span>
                   <span className="text-accent font-semibold">
                     {stat.value} {stat.label}

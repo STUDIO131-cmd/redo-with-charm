@@ -55,8 +55,8 @@ const TeamSection = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <h3 className="font-display text-base md:text-lg text-foreground">{member.name}</h3>
-              <p className="text-muted-foreground text-xs font-body">{member.role}</p>
+              <h3 className="text-base md:text-lg text-foreground font-medium">{member.name}</h3>
+              <p className="text-muted-foreground text-xs">{member.role}</p>
             </motion.div>
           ))}
         </div>

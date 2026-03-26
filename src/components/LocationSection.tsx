@@ -16,7 +16,7 @@ const LocationSection = () => {
       </motion.p>
       <div className="w-16 h-px bg-muted-foreground/30 mx-auto my-6" />
       <motion.p
-        className="text-muted-foreground text-base md:text-lg leading-relaxed font-body"
+        className="text-muted-foreground text-base md:text-lg leading-relaxed"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
