@@ -178,7 +178,7 @@ const ServicesSection = () => {
               <span className="text-2xl md:text-3xl font-bold block text-accent">Campanhas</span>
               <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Personalização + Pontualidade</span>
             </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
             </p>
             <ul className="text-sm font-body space-y-1 mb-4" style={{ color: "hsl(0,0%,50%)" }}>
