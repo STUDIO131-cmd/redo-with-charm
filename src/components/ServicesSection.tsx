@@ -72,8 +72,8 @@ const ServicesSection = () => {
         />
 
         <h2
-          className="text-2xl md:text-3xl text-center text-foreground relative z-10 font-sans mb-6 px-6"
-          style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
+          className="text-2xl md:text-3xl text-center text-foreground relative z-10 mb-6 px-6 font-light"
+          style={{ fontStretch: "expanded" }}
         >
           Marcas que atendemos no decorrer dos anos:
         </h2>
@@ -104,7 +104,7 @@ const ServicesSection = () => {
       {/* Título principal */}
       <motion.p
         className="text-center text-foreground mb-10 text-xl md:text-3xl font-light mt-0"
-        style={{ fontFamily: "'TikTok Sans', sans-serif", fontWeight: 300, fontStretch: "expanded" }}
+        style={{ fontStretch: "expanded" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -138,13 +138,13 @@ const ServicesSection = () => {
               <span className="text-2xl md:text-3xl font-bold block text-accent">O Plano Profissional</span>
               <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Operação + Consultoria</span>
             </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Estruturamos a estratégia de conteúdo, geração de demanda e acompanhamos o processo comercial para que o crescimento aconteça sem depender exclusivamente do tempo do empresário.
             </p>
-            <p className="text-sm font-body tracking-wide" style={{ color: "hsl(0,0%,50%)" }}>
+            <p className="text-sm tracking-wide" style={{ color: "hsl(0,0%,32%)" }}>
               Eixos do acompanhamento:
             </p>
-            <ul className="text-sm font-body space-y-1" style={{ color: "hsl(0,0%,50%)" }}>
+            <ul className="text-sm space-y-1" style={{ color: "hsl(0,0%,32%)" }}>
               <li>— Estratégia de conteúdo</li>
               <li>— Tráfego Pago</li>
               <li>— Acompanhamento Comercial</li>
@@ -178,10 +178,10 @@ const ServicesSection = () => {
               <span className="text-2xl md:text-3xl font-bold block text-accent">Campanhas</span>
               <span className="text-sm md:text-base font-extralight block uppercase tracking-wide">Personalização + Pontualidade</span>
             </h3>
-            <p className="text-base leading-relaxed font-body" style={{ color: "hsl(0,0%,60%)" }}>
+            <p className="text-base leading-relaxed" style={{ color: "hsl(180,1%,53%)" }}>
               Criamos campanhas sob medida para ativar picos de faturamento em curto prazo, organizando comunicação, conteúdo e estratégia comercial em momentos decisivos do negócio.
             </p>
-            <ul className="text-sm font-body space-y-1 mb-4" style={{ color: "hsl(0,0%,50%)" }}>
+            <ul className="text-sm space-y-1 mb-4" style={{ color: "hsl(0,0%,32%)" }}>
               <li className="my-[3px]">— Lançamentos de marca ou produto</li>
               <li className="my-[3px]">— Rebranding e reposicionamento</li>
               <li className="my-[3px]">— Datas comerciais estratégicas</li>

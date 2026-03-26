@@ -52,10 +52,10 @@ const StatsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-xl md:text-3xl font-display text-primary-foreground mb-2">
+          <h2 className="text-xl md:text-3xl text-primary-foreground mb-2 font-light" style={{ fontStretch: "expanded" }}>
             Aqui construímos<br />uma Jornada de<br />Ascensão:
           </h2>
-          <p className="text-primary-foreground/60 font-body text-sm mb-5">
+          <p className="text-primary-foreground/60 text-sm mb-5">
             ► Bebemos da nossa fonte;
           </p>
 
@@ -68,7 +68,7 @@ const StatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed font-body">
+                <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed">
                   <span className="text-accent mr-1">❖</span>
                   <span className="text-accent font-semibold">
                     {stat.value} {stat.label}

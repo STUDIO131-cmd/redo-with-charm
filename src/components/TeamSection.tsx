@@ -20,7 +20,7 @@ const TeamSection = () => {
     <section className="bg-secondary px-6 py-12">
       <div className="max-w-5xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-xs tracking-widest uppercase mb-2 text-center font-body"
+          className="text-muted-foreground text-xs tracking-widest uppercase mb-2 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -28,7 +28,8 @@ const TeamSection = () => {
           Meet our team
         </motion.p>
         <motion.h2
-          className="text-2xl md:text-3xl font-display text-center mb-12 text-foreground"
+          className="text-2xl md:text-3xl text-center mb-12 text-foreground font-light"
+          style={{ fontStretch: "expanded" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -54,8 +55,8 @@ const TeamSection = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <h3 className="font-display text-base md:text-lg text-foreground">{member.name}</h3>
-              <p className="text-muted-foreground text-xs font-body">{member.role}</p>
+              <h3 className="text-base md:text-lg text-foreground font-medium">{member.name}</h3>
+              <p className="text-muted-foreground text-xs">{member.role}</p>
             </motion.div>
           ))}
         </div>

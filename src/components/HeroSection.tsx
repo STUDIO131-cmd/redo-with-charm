@@ -63,7 +63,8 @@ const HeroSection = () => {
           />
         </motion.div>
         <motion.h1
-          className="text-3xl md:text-4xl font-display mb-4 text-foreground"
+          className="text-3xl md:text-4xl mb-4 text-foreground font-light"
+          style={{ fontStretch: "expanded" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
