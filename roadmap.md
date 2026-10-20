@@ -4,4 +4,5 @@
 - [x] Atualizar React Router, Recharts e transitivas para corrigir os avisos aprovados.
 - [ ] Ignorar .env e .env.production (bloqueado: .gitignore protegido contra edição nesta sessão).
 - [x] Manter somente bun.lock e documentar o gerenciador de dependências.
-- [ ] Verificar rotas visualmente, testes e integridade dos portais; solicitar publicação.
+- [x] Verificar rotas visualmente, testes e integridade dos portais.
+- [x] Solicitar publicação após verificações aprovadas.
