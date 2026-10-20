@@ -1,7 +1,7 @@
 - [x] Substituir dashboard da Natália exatamente pelo anexo, preservando Fabrício.
 - [x] Investigar evidências atuais do 404: ambos retornam 200; causa histórica não comprovada sem logs do CDN/deploy.
 - [x] Solicitar nova publicação após verificação.
-- [ ] Atualizar React Router, Recharts e transitivas para corrigir os avisos aprovados.
+- [x] Atualizar React Router, Recharts e transitivas para corrigir os avisos aprovados.
 - [ ] Ignorar .env e .env.production (bloqueado: .gitignore protegido contra edição nesta sessão).
-- [ ] Manter somente bun.lock e documentar o gerenciador de dependências.
+- [x] Manter somente bun.lock e documentar o gerenciador de dependências.
 - [ ] Verificar rotas visualmente, testes e integridade dos portais; solicitar publicação.
