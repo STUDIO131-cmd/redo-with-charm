@@ -1,0 +1,3 @@
+- [x] Substituir dashboard da Natália exatamente pelo anexo, preservando Fabrício.
+- [ ] Investigar evidências atuais do 404 e limites da identificação da causa.
+- [ ] Solicitar nova publicação após verificação.
