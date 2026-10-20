@@ -1,0 +1,3 @@
+- [x] Substituir dashboard da Natália exatamente pelo anexo, preservando Fabrício.
+- [x] Investigar evidências atuais do 404: ambos retornam 200; causa histórica não comprovada sem logs do CDN/deploy.
+- [x] Solicitar nova publicação após verificação.
