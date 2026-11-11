@@ -87,6 +87,23 @@ a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px;
 .pedido { padding: 20px; background: var(--vinho-soft); border-radius: 8px; display: flex; flex-direction: column; gap: 10px; }
 .pedido h3 { color: var(--vinho); }
 .criativos { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+@media (max-width: 600px) {
+  .table-scroll { overflow-x: visible; border: 0; border-radius: 0; background: transparent; }
+  .table-scroll table, .table-scroll thead, .table-scroll tbody, .table-scroll tr, .table-scroll td { display: block; box-sizing: border-box; width: auto; min-width: 0; }
+  .table-scroll table { width: 100%; }
+  .table-scroll thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .table-scroll tbody { display: flex; flex-direction: column; gap: 10px; }
+  .table-scroll tr { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .table-scroll tr.destaque { border-color: var(--vinho); }
+  .table-scroll td { display: grid; grid-template-columns: minmax(0, 44%) minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 8px 14px; border-bottom: 1px solid var(--line); }
+  .table-scroll td::before { content: attr(data-label); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+  .table-scroll td.num { text-align: right; white-space: normal; }
+  .table-scroll td:first-child { display: block; padding: 12px 14px 10px; background: var(--bg); font-weight: 700; }
+  .table-scroll td:first-child::before { content: none; }
+  .table-scroll td:last-child { border-bottom: 0; }
+  .table-scroll td.texto { grid-template-columns: 1fr; gap: 2px; }
+  a.video { white-space: normal; }
+}
 </style>
 </head>
 <body>
@@ -105,11 +122,11 @@ a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px;
     <table>
       <thead><tr><th>Campanha</th><th>Situação</th><th>Por quê</th></tr></thead>
       <tbody>
-        <tr><td>Leads de Lentes (formulário)</td><td>Desativada</td><td>Quem chega por mensagem conversa mais com a equipe do que quem chega por formulário.</td></tr>
-        <tr><td>Mensagens de Limpeza (AirFlow)</td><td>Desativada</td><td>Tirava o protagonismo de Lentes e atraía um público que depois não fechava Lentes.</td></tr>
-        <tr><td>Visualização de vídeo de Lentes</td><td>Desativada</td><td>Já somou mais de 10 mil visualizações completas. Esse público agora é usado no remarketing. Em R$ 311 de gasto, trouxe 1 conversa.</td></tr>
-        <tr><td>Acessos ao Perfil de Lentes</td><td>Desativada</td><td>Levava visita ao perfil, mas não convertia em seguidor.</td></tr>
-        <tr class="destaque"><td>Mensagens de Lentes</td><td>Reconfigurada</td><td>Passa a ser a única campanha da conta, com três conjuntos.</td></tr>
+        <tr><td data-label="Campanha">Leads de Lentes (formulário)</td><td data-label="Situação">Desativada</td><td class="texto" data-label="Por quê">Quem chega por mensagem conversa mais com a equipe do que quem chega por formulário.</td></tr>
+        <tr><td data-label="Campanha">Mensagens de Limpeza (AirFlow)</td><td data-label="Situação">Desativada</td><td class="texto" data-label="Por quê">Tirava o protagonismo de Lentes e atraía um público que depois não fechava Lentes.</td></tr>
+        <tr><td data-label="Campanha">Visualização de vídeo de Lentes</td><td data-label="Situação">Desativada</td><td class="texto" data-label="Por quê">Já somou mais de 10 mil visualizações completas. Esse público agora é usado no remarketing. Em R$ 311 de gasto, trouxe 1 conversa.</td></tr>
+        <tr><td data-label="Campanha">Acessos ao Perfil de Lentes</td><td data-label="Situação">Desativada</td><td class="texto" data-label="Por quê">Levava visita ao perfil, mas não convertia em seguidor.</td></tr>
+        <tr class="destaque"><td data-label="Campanha">Mensagens de Lentes</td><td data-label="Situação">Reconfigurada</td><td class="texto" data-label="Por quê">Passa a ser a única campanha da conta, com três conjuntos.</td></tr>
       </tbody>
     </table>
   </div>
@@ -122,10 +139,10 @@ a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px;
     <table>
       <thead><tr><th>Criativo</th><th class="num">Conversas</th><th class="num">Continuaram</th><th class="num">% que continuou</th><th class="num">Custo por conversa que continuou</th></tr></thead>
       <tbody>
-        <tr class="destaque"><td>Dr. Fabrício explica a curvatura do sorriso · <a class="video" href="https://drive.google.com/file/d/1WI1ukxzuBUEDqDHtZRmLcSF33fwqY7fy/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">49</td><td class="num">26</td><td class="num">53%</td><td class="num">R$ 23,18</td></tr>
-        <tr><td>"Tem medo de ficar artificial?" · <a class="video" href="https://drive.google.com/file/d/1sVr9KVJS1SVj8SuDif6HDAa7gJigxADR/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">20</td><td class="num">8</td><td class="num">40%</td><td class="num">R$ 46,46</td></tr>
-        <tr><td>Depoimento de paciente sobre a nova fase · <a class="video" href="https://drive.google.com/file/d/1KlaPuIXSCF3xhc-kIwaZAsH0aVDNVE3z/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">10</td><td class="num">8</td><td class="num">80%</td><td class="num">R$ 52,24</td></tr>
-        <tr><td>"Seu novo sorriso com lentes de contato dental", na campanha de formulário · <a class="video" href="https://drive.google.com/file/d/1jeq1XqYOKNYWOpahywN7ggxiqGWzvGEw/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">21</td><td class="num">15</td><td class="num">71%</td><td class="num">R$ 65,40</td></tr>
+        <tr class="destaque"><td data-label="Criativo">Dr. Fabrício explica a curvatura do sorriso · <a class="video" href="https://drive.google.com/file/d/1WI1ukxzuBUEDqDHtZRmLcSF33fwqY7fy/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num" data-label="Conversas">49</td><td class="num" data-label="Continuaram">26</td><td class="num" data-label="% que continuou">53%</td><td class="num" data-label="Custo por conversa que continuou">R$ 23,18</td></tr>
+        <tr><td data-label="Criativo">"Tem medo de ficar artificial?" · <a class="video" href="https://drive.google.com/file/d/1sVr9KVJS1SVj8SuDif6HDAa7gJigxADR/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num" data-label="Conversas">20</td><td class="num" data-label="Continuaram">8</td><td class="num" data-label="% que continuou">40%</td><td class="num" data-label="Custo por conversa que continuou">R$ 46,46</td></tr>
+        <tr><td data-label="Criativo">Depoimento de paciente sobre a nova fase · <a class="video" href="https://drive.google.com/file/d/1KlaPuIXSCF3xhc-kIwaZAsH0aVDNVE3z/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num" data-label="Conversas">10</td><td class="num" data-label="Continuaram">8</td><td class="num" data-label="% que continuou">80%</td><td class="num" data-label="Custo por conversa que continuou">R$ 52,24</td></tr>
+        <tr><td data-label="Criativo">"Seu novo sorriso com lentes de contato dental", na campanha de formulário · <a class="video" href="https://drive.google.com/file/d/1jeq1XqYOKNYWOpahywN7ggxiqGWzvGEw/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num" data-label="Conversas">21</td><td class="num" data-label="Continuaram">15</td><td class="num" data-label="% que continuou">71%</td><td class="num" data-label="Custo por conversa que continuou">R$ 65,40</td></tr>
       </tbody>
     </table>
   </div>
@@ -201,9 +218,9 @@ a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px;
     <table>
       <thead><tr><th>Verba diária em mensagens</th><th class="num">Conversas por dia</th></tr></thead>
       <tbody>
-        <tr><td>Como era em outubro (cerca de R$ 24)</td><td class="num">cerca de 1</td></tr>
-        <tr class="destaque"><td>Proposta para 12 a 30/11 (R$ 120)</td><td class="num">3,4 a 5,3</td></tr>
-        <tr><td>R$ 2.400 por mês, todo em mensagens (R$ 80)</td><td class="num">2 a 3,5</td></tr>
+        <tr><td data-label="Verba diária em mensagens">Como era em outubro (cerca de R$ 24)</td><td class="num" data-label="Conversas por dia">cerca de 1</td></tr>
+        <tr class="destaque"><td data-label="Verba diária em mensagens">Proposta para 12 a 30/11 (R$ 120)</td><td class="num" data-label="Conversas por dia">3,4 a 5,3</td></tr>
+        <tr><td data-label="Verba diária em mensagens">R$ 2.400 por mês, todo em mensagens (R$ 80)</td><td class="num" data-label="Conversas por dia">2 a 3,5</td></tr>
       </tbody>
     </table>
   </div>
@@ -222,8 +239,8 @@ a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px;
     <table>
       <thead><tr><th>Cenário</th><th class="num">Custo por conversa</th><th class="num">Conversas</th><th class="num">Que continuam</th></tr></thead>
       <tbody>
-        <tr><td>Se o custo se mantiver no nível de outubro</td><td class="num">R$ 22,80</td><td class="num">cerca de 100</td><td class="num">cerca de 50</td></tr>
-        <tr><td>Se o custo subir com o aumento de verba</td><td class="num">R$ 35</td><td class="num">cerca de 65</td><td class="num">cerca de 26</td></tr>
+        <tr><td data-label="Cenário">Se o custo se mantiver no nível de outubro</td><td class="num" data-label="Custo por conversa">R$ 22,80</td><td class="num" data-label="Conversas">cerca de 100</td><td class="num" data-label="Que continuam">cerca de 50</td></tr>
+        <tr><td data-label="Cenário">Se o custo subir com o aumento de verba</td><td class="num" data-label="Custo por conversa">R$ 35</td><td class="num" data-label="Conversas">cerca de 65</td><td class="num" data-label="Que continuam">cerca de 26</td></tr>
       </tbody>
     </table>
   </div>
