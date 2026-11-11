@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STUDIO131 · Dr. Fabrício Duarte · Campanha de Mensagens</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TikTok+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: mesmo molde dos documentos de tráfego do Studio131. Coluna única (~740px): decisão, seleção de criativos, estrutura em 3 conjuntos, expectativa até 30/11. */
+:root {
+  --bg: #f6f2ea;
+  --surface: #ffffff;
+  --fg: #2b2b2b;
+  --muted: #6b6b6b;
+  --line: #e2dbcf;
+  --vinho: #630f2d;
+  --vinho-soft: #f3e6ea;
+  --petroleo: #2d5978;
+  --petroleo-soft: #e4eef5;
+  --ok: #35684a;
+  --ok-soft: #e3efe7;
+  --ambar: #8a6411;
+  --ambar-soft: #f7efd9;
+  --font: 'TikTok Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a1b; --surface: #262325; --fg: #ece8e4; --muted: #a8a29e; --line: #3a3537;
+    --vinho: #d58aa6; --vinho-soft: #3a2230; --petroleo: #8cbbd9; --petroleo-soft: #1f2e39;
+    --ok: #8cc4a2; --ok-soft: #1f3327; --ambar: #e3c06a; --ambar-soft: #3a3020;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a1b; --surface: #262325; --fg: #ece8e4; --muted: #a8a29e; --line: #3a3537;
+  --vinho: #d58aa6; --vinho-soft: #3a2230; --petroleo: #8cbbd9; --petroleo-soft: #1f2e39;
+  --ok: #8cc4a2; --ok-soft: #1f3327; --ambar: #e3c06a; --ambar-soft: #3a3020;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font);
+  font-size: 15.5px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+.wrap { max-width: 740px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px; }
+header { display: flex; flex-direction: column; gap: 10px; border-bottom: 2px solid var(--vinho); padding-bottom: 22px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--vinho); }
+h1 { font-size: 31px; line-height: 1.15; font-weight: 800; margin: 0; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 13.5px; }
+h2 { font-size: 21px; font-weight: 700; margin: 0; text-wrap: balance; }
+h3 { font-size: 16px; font-weight: 700; margin: 0; }
+section { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+p { margin: 0; max-width: 68ch; }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.lead { font-size: 16.5px; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+td.num, th.num { text-align: right; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+tr.destaque td { font-weight: 700; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.kpi .v { font-size: 21px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.kpi .l { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+.conceito { padding: 12px 14px; background: var(--petroleo-soft); border-radius: 6px; font-size: 14px; display: flex; flex-direction: column; gap: 4px; }
+.conceito b { color: var(--petroleo); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.nota { font-size: 13.5px; color: var(--muted); }
+.ficha { display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
+.ficha-topo { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline; }
+.verba { font-size: 12.5px; font-weight: 700; padding: 3px 10px; border-radius: 99px; background: var(--ok-soft); color: var(--ok); white-space: nowrap; }
+.grade { display: grid; grid-template-columns: 112px 1fr; gap: 8px 14px; font-size: 14.5px; margin: 0; }
+.grade dt { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.grade dt.porque { color: var(--vinho); }
+.grade dd { margin: 0; min-width: 0; }
+@media (max-width: 480px) { .grade { grid-template-columns: 1fr; gap: 2px; } .grade dd { margin-bottom: 8px; } }
+.frase { padding: 18px 20px; background: var(--vinho-soft); border-radius: 8px; font-size: 16.5px; font-weight: 600; color: var(--fg); }
+.frase span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--vinho); margin-bottom: 6px; }
+.expectativa { padding: 20px; background: var(--ok-soft); border-radius: 8px; display: flex; flex-direction: column; gap: 10px; }
+.expectativa h3 { color: var(--ok); }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+a.video { color: var(--petroleo); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+a.video:focus-visible { outline: 2px solid var(--petroleo); outline-offset: 2px; border-radius: 2px; }
+.pedido { padding: 20px; background: var(--vinho-soft); border-radius: 8px; display: flex; flex-direction: column; gap: 10px; }
+.pedido h3 { color: var(--vinho); }
+.criativos { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Studio131 · Tráfego pago</span>
+  <h1>Fabrício Duarte: toda a verba de anúncios agora vai para conversas no WhatsApp</h1>
+  <span class="meta">Conta "CA | Fabrício Duarte" · dados de 01/06 a 10/11/2026 · preparado em 11/11/2026</span>
+</header>
+
+<section>
+  <h2>A decisão: anúncio agora só para trazer mensagem</h2>
+  <p class="lead">O critério principal desta mudança foi um só: desligar o que não trazia conversa e concentrar a verba em anúncios que levam a pessoa direto para o WhatsApp da clínica.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Campanha</th><th>Situação</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>Leads de Lentes (formulário)</td><td>Desativada</td><td>Quem chega por mensagem conversa mais com a equipe do que quem chega por formulário.</td></tr>
+        <tr><td>Mensagens de Limpeza (AirFlow)</td><td>Desativada</td><td>Tirava o protagonismo de Lentes e atraía um público que depois não fechava Lentes.</td></tr>
+        <tr><td>Visualização de vídeo de Lentes</td><td>Desativada</td><td>Já somou mais de 10 mil visualizações completas. Esse público agora é usado no remarketing. Em R$ 311 de gasto, trouxe 1 conversa.</td></tr>
+        <tr><td>Acessos ao Perfil de Lentes</td><td>Desativada</td><td>Levava visita ao perfil, mas não convertia em seguidor.</td></tr>
+        <tr class="destaque"><td>Mensagens de Lentes</td><td>Reconfigurada</td><td>Passa a ser a única campanha da conta, com três conjuntos.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Como escolhemos os criativos</h2>
+  <p>Analisamos a conta inteira, anúncio por anúncio, desde junho. A medida que usamos não foi o número de conversas iniciadas. Foi o número de <strong>conversas em que a pessoa respondeu depois da primeira mensagem</strong>, que é quem de fato continua o atendimento com a equipe.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Criativo</th><th class="num">Conversas</th><th class="num">Continuaram</th><th class="num">% que continuou</th><th class="num">Custo por conversa que continuou</th></tr></thead>
+      <tbody>
+        <tr class="destaque"><td>Dr. Fabrício explica a curvatura do sorriso · <a class="video" href="https://drive.google.com/file/d/1WI1ukxzuBUEDqDHtZRmLcSF33fwqY7fy/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">49</td><td class="num">26</td><td class="num">53%</td><td class="num">R$ 23,18</td></tr>
+        <tr><td>"Tem medo de ficar artificial?" · <a class="video" href="https://drive.google.com/file/d/1sVr9KVJS1SVj8SuDif6HDAa7gJigxADR/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">20</td><td class="num">8</td><td class="num">40%</td><td class="num">R$ 46,46</td></tr>
+        <tr><td>Depoimento de paciente sobre a nova fase · <a class="video" href="https://drive.google.com/file/d/1KlaPuIXSCF3xhc-kIwaZAsH0aVDNVE3z/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">10</td><td class="num">8</td><td class="num">80%</td><td class="num">R$ 52,24</td></tr>
+        <tr><td>"Seu novo sorriso com lentes de contato dental", na campanha de formulário · <a class="video" href="https://drive.google.com/file/d/1jeq1XqYOKNYWOpahywN7ggxiqGWzvGEw/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></td><td class="num">21</td><td class="num">15</td><td class="num">71%</td><td class="num">R$ 65,40</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">Gerenciador de Anúncios, 01/06 a 09/11/2026. O último criativo da tabela rodou numa campanha de formulário, por isso o custo por conversa dele não se compara direto com os outros. Além das 21 conversas, ele trouxe 25 leads de formulário, e um deles fechou uma reabilitação oral de R$ 16 mil em setembro.</p>
+
+  <div class="frase"><span>O que mais funcionou até agora</span>O Dr. Fabrício, com a própria voz, explicando um detalhe do sorriso que a pessoa consegue conferir no espelho.</div>
+  <p>É <a class="video" href="https://drive.google.com/file/d/1WI1ukxzuBUEDqDHtZRmLcSF33fwqY7fy/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a>: em 34 segundos, ele mostra por que o sorriso precisa ter curvatura e por que dente reto fica desarmônico, com uma linha desenhada sobre o sorriso logo no começo. Em outubro, ele e o criativo "Tem medo de ficar artificial?" abriram o mesmo número de conversas, 20 cada, com gasto parecido. No primeiro, 13 pessoas continuaram a conversa. No segundo, 8. O que separa os dois é quem continua, não quem começa.</p>
+  <p>Os depoimentos de paciente mostraram outro comportamento: <a class="video" href="https://drive.google.com/file/d/1KlaPuIXSCF3xhc-kIwaZAsH0aVDNVE3z/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a> abre poucas conversas, mas 8 em cada 10 continuam. Por isso os depoimentos foram para quem já conhece o Dr. Fabrício, no remarketing.</p>
+  <p>Os demais criativos da campanha foram selecionados pelo desempenho em campanhas com outros objetivos. Dois são novos e nunca rodaram, e são os únicos em que o Dr. Fabrício convida a pessoa a mandar mensagem.</p>
+</section>
+
+<section>
+  <h2>A nova campanha: uma campanha, três conjuntos</h2>
+  <p>Cada conjunto tem um papel e verba própria. Assim, um criativo que já tem histórico não tira a verba dos que estão sendo testados, e cada resultado pode ser lido separado.</p>
+
+  <div class="ficha">
+    <div class="ficha-topo"><h3>Conjunto 1. Prospecção</h3><span class="verba">R$ 40 por dia</span></div>
+    <dl class="grade">
+      <dt>Público</dt><dd>Catanduva e 30 km ao redor, de 28 a 64 anos, todos os gêneros, sem segmentação por interesse.</dd>
+      <dt>Criativos</dt><dd><ul class="criativos">
+        <li>Dr. Fabrício explica a curvatura do sorriso · <a class="video" href="https://drive.google.com/file/d/1WI1ukxzuBUEDqDHtZRmLcSF33fwqY7fy/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>"Tem medo de ficar artificial?" · <a class="video" href="https://drive.google.com/file/d/1sVr9KVJS1SVj8SuDif6HDAa7gJigxADR/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+      </ul></dd>
+      <dt class="porque">Por que</dt><dd>São os dois criativos com o menor custo por conversa que continua. A faixa de 45 a 54 anos foi a de menor custo por conversa que continuou (R$ 27,05), e ficou dentro da faixa escolhida.</dd>
+    </dl>
+  </div>
+
+  <div class="conceito"><b>Por que não segmentamos por interesse</b>
+    <span>Catanduva e 30 km ao redor é uma praça pequena. Cada interesse adicionado corta uma parte de quem pode ver o anúncio, e com R$ 120 por dia o anúncio passaria a aparecer muitas vezes para as mesmas pessoas em poucos dias, o que encarece cada conversa. Interesse no Meta também é estimado pelo comportamento na plataforma: quem pensa em fazer lentes não necessariamente aparece marcado com esse interesse. Por isso o filtro fica no próprio vídeo, que fala de lentes e só prende quem quer mudar o sorriso, e no objetivo da campanha, que faz o Meta procurar quem costuma mandar mensagem.</span>
+  </div>
+
+  <div class="ficha">
+    <div class="ficha-topo"><h3>Conjunto 2. Teste de criativos</h3><span class="verba">R$ 40 por dia</span></div>
+    <dl class="grade">
+      <dt>Público</dt><dd>O mesmo do conjunto 1.</dd>
+      <dt>Criativos</dt><dd><ul class="criativos">
+        <li>"Seu novo sorriso com lentes de contato dental" · <a class="video" href="https://drive.google.com/file/d/1jeq1XqYOKNYWOpahywN7ggxiqGWzvGEw/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Dr. Fabrício explica a avaliação (novo) · <a class="video" href="https://drive.google.com/file/d/1454YDXC1XmsOU5r06bN4PEydVqkiO82B/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Dr. Fabrício: lentes que parecem dentes de verdade (novo) · <a class="video" href="https://drive.google.com/file/d/1ioUNAb1RXjfdS6ipUSa2WmkAj_QFfFyT/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>"Especialista em lentes de contato dental" · <a class="video" href="https://drive.google.com/file/d/1z7fAxG1ysnUokQ6Aehl03oRMCKx_yG5i/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+      </ul></dd>
+      <dt class="porque">Por que</dt><dd>São criativos que ainda não rodaram em mensagem. Com verba fixa e público igual ao da prospecção, o único que muda é o vídeo, e dá para saber qual traz mais conversa que continua. Regra de corte: depois de cerca de R$ 70 sem nenhuma conversa que continuou, o criativo sai. O que ficar abaixo de R$ 46,46 por conversa que continuou em 14 dias passa para a prospecção.</dd>
+    </dl>
+  </div>
+
+  <div class="ficha">
+    <div class="ficha-topo"><h3>Conjunto 3. Remarketing</h3><span class="verba">R$ 40 por dia</span></div>
+    <dl class="grade">
+      <dt>Público</dt><dd>Quem assistiu aos vídeos de Lentes até o fim e quem interagiu com o Instagram nos últimos 180 dias, de 28 a 64 anos.</dd>
+      <dt>Criativos</dt><dd><ul class="criativos">
+        <li>Depoimento de paciente sobre a nova fase · <a class="video" href="https://drive.google.com/file/d/1KlaPuIXSCF3xhc-kIwaZAsH0aVDNVE3z/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Depoimento: "é o meu sorriso" · <a class="video" href="https://drive.google.com/file/d/1Z_W85RnTU_2ZY6UfBRlMCRP7rw20DmNt/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Depoimento: naturalidade e confiança no trabalho · <a class="video" href="https://drive.google.com/file/d/1KKAs72jUN7mj221BNmmUafNv08XGp1VP/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Depoimento: o sorriso amarelado e a confiança · <a class="video" href="https://drive.google.com/file/d/1HG8c-EyU2LvvyPYmdBqI7bydc5TpfeTY/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>"Seu novo sorriso com lentes de contato dental" · <a class="video" href="https://drive.google.com/file/d/1jeq1XqYOKNYWOpahywN7ggxiqGWzvGEw/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Dr. Fabrício explica a avaliação (novo) · <a class="video" href="https://drive.google.com/file/d/1454YDXC1XmsOU5r06bN4PEydVqkiO82B/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+        <li>Dr. Fabrício: lentes que parecem dentes de verdade (novo) · <a class="video" href="https://drive.google.com/file/d/1ioUNAb1RXjfdS6ipUSa2WmkAj_QFfFyT/view" target="_blank" rel="noopener">este criativo (clique para assistir)</a></li>
+      </ul></dd>
+      <dt class="porque">Por que</dt><dd>É quem já conhece o Dr. Fabrício e ainda não falou com a clínica. Para essas pessoas entram os depoimentos de paciente, o formato em que a maior parte de quem começa a conversa continua.</dd>
+    </dl>
+  </div>
+
+  <div class="conceito"><b>Configurações que valem para os três</b>
+    <span>Objetivo de conversa no WhatsApp. Ficam de fora os pacientes e leads que já estão no CRM e quem mandou mensagem nos últimos 30 dias. O público do remarketing fica de fora dos conjuntos 1 e 2. Os anúncios aparecem no Instagram e no feed, reels e stories do Facebook. A conversa abre com uma pergunta de resposta rápida: o que mais incomoda no sorriso (cor, formato, tamanho ou desgaste).</span>
+  </div>
+</section>
+
+<section>
+  <h2>O investimento que propomos</h2>
+  <p>O investimento mensal em anúncios é de R$ 2.400. Desse total, só uma parte ia para mensagens de Lentes, e o padrão da conta tem sido de cerca de 1 conversa por dia: outubro inteiro teve 32. Com a verba e a divisão de antes, esse resultado se repetiria.</p>
+  <p>Como já estamos em 11/11, a campanha nova tem menos de três semanas para ganhar tração. Nos primeiros dias o Meta ainda está aprendendo para quem entregar, e esse aprendizado depende de volume de conversas. Por isso propomos um aumento só para o restante de novembro: R$ 120 por dia, todo em mensagens, de 12 a 30/11.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Verba diária em mensagens</th><th class="num">Conversas por dia</th></tr></thead>
+      <tbody>
+        <tr><td>Como era em outubro (cerca de R$ 24)</td><td class="num">cerca de 1</td></tr>
+        <tr class="destaque"><td>Proposta para 12 a 30/11 (R$ 120)</td><td class="num">3,4 a 5,3</td></tr>
+        <tr><td>R$ 2.400 por mês, todo em mensagens (R$ 80)</td><td class="num">2 a 3,5</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">Faixa calculada entre o custo por conversa de outubro (R$ 22,80) e um custo mais alto, de R$ 35, que é o que esperamos se o custo subir com o aumento de verba. Das conversas, de 40% a 53% devem continuar depois da primeira mensagem.</p>
+  <div class="pedido">
+    <h3>O que pedimos ao Dr. Fabrício</h3>
+    <p><strong>Aprovar R$ 2.280 em anúncios de 12 a 30/11 (R$ 120 por dia).</strong> Até 11/11 já foram investidos R$ 922 em novembro, então o mês fecha em cerca de R$ 3.200, uns R$ 800 acima dos R$ 2.400.</p>
+    <p>É um aumento pontual. Se a campanha provar resultado com menos investimento, em dezembro voltamos aos R$ 2.400, que dão R$ 80 por dia, todos em mensagens.</p>
+  </div>
+</section>
+
+<section>
+  <h2>O que esperar até 30 de novembro</h2>
+  <p>A conta usa como base o próprio histórico da campanha de mensagens de Lentes: R$ 22,80 por conversa em outubro e R$ 28,60 de 01 a 09/11. De 12 a 30/11 são 19 dias, ou R$ 2.280 de verba.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Cenário</th><th class="num">Custo por conversa</th><th class="num">Conversas</th><th class="num">Que continuam</th></tr></thead>
+      <tbody>
+        <tr><td>Se o custo se mantiver no nível de outubro</td><td class="num">R$ 22,80</td><td class="num">cerca de 100</td><td class="num">cerca de 50</td></tr>
+        <tr><td>Se o custo subir com o aumento de verba</td><td class="num">R$ 35</td><td class="num">cerca de 65</td><td class="num">cerca de 26</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="expectativa">
+    <h3>Na prática: de 65 a 100 conversas até o fim do mês, de 26 a 50 delas com a pessoa respondendo</h3>
+    <p>Para comparar, outubro inteiro teve 32 conversas.</p>
+  </div>
+  <ul>
+    <li>Nos primeiros 3 a 5 dias, o Meta ainda está aprendendo a entregar a campanha nova, e o custo costuma ficar mais alto.</li>
+    <li>Quando a verba se multiplica numa cidade do tamanho de Catanduva, o custo por conversa tende a subir. Por isso o cenário de baixo conta com custo maior que o de outubro.</li>
+    <li>Conversa não é avaliação agendada nem venda. Esse número depende do atendimento e vamos acompanhar junto com o CRM.</li>
+  </ul>
+</section>
+
+<footer>Fontes: Gerenciador de Anúncios via API (anúncios de 01/06 a 10/11/2026; idade, gênero e posicionamento no mesmo período); leitura dos vídeos de cada criativo (transcrição e quadros); CRM da clínica para a venda de setembro. Studio131.</footer>
+
+</div>
+
+</body>
+</html>
